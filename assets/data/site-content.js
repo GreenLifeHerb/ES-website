@@ -1,7 +1,7 @@
 window.ESSENCE_SOURCE_CONTENT = {
   siteName: "Essence Source",
   domain: "https://essencesourceusa.com",
-  tagline: "U.S.-warehouse-backed botanical ingredients",
+  tagline: "U.S. botanical ingredient supply",
   description:
     "Essence Source is a botanical ingredients website for U.S. B2B buyers seeking documentation-ready sourcing with U.S. warehousing support and manufacturing-backed supply.",
   contact: {
@@ -38,6 +38,12 @@ window.ESSENCE_SOURCE_CONTENT = {
     { href: "resources.html", label: "Resources" },
     { href: "about.html", label: "About" },
     { href: "contact.html", label: "Contact" },
+  ],
+  headerPrimaryNav: [
+    { href: "applications.html", label: "Applications" },
+    { href: "warehouse.html", label: "U.S. Warehouse" },
+    { href: "quality.html", label: "Quality" },
+    { href: "resources.html", label: "Resources" },
   ],
   megaMenu: {
     summary:

@@ -22,7 +22,7 @@
 
   function buildHeader() {
     const content = window.ESSENCE_SOURCE_CONTENT;
-    const navLinks = content.primaryNav
+    const navLinks = content.headerPrimaryNav
       .map(
         (item) =>
           `<a class="site-nav__link" href="${item.href}" data-nav-link="${item.href}">${item.label}</a>`,
@@ -60,12 +60,12 @@
             <button class="site-nav__button" type="button" aria-expanded="false" aria-controls="site-mega-panel" data-mega-trigger>
               Products
             </button>
-            ${navLinks.replace('<a class="site-nav__link" href="products.html" data-nav-link="products.html">Products</a>', "")}
+            ${navLinks}
           </nav>
           <div class="site-actions">
-            <a class="site-nav__link site-nav__link--desktop-only" href="quality.html#document-request">Ask for COA</a>
+            <a class="site-nav__link site-nav__link--desktop-wide" href="quality.html#document-request">Ask for COA</a>
             <a class="button button--primary" href="contact.html#inquiry-form">Request Quote</a>
-            <button class="button button--secondary mobile-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu" data-nav-toggle>
+            <button class="button button--secondary menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu" data-nav-toggle>
               Menu
             </button>
           </div>
@@ -87,6 +87,7 @@
           <button class="button button--secondary" type="button" aria-label="Close navigation menu" data-nav-close>Close</button>
         </div>
         <nav class="mobile-nav">
+          <a href="products.html">Products Overview</a>
           ${mobileLinks}
           <a href="quality.html#document-request">Ask for COA</a>
           <a href="contact.html#inquiry-form">Request Quote</a>
