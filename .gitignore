@@ -27,6 +27,7 @@
 /assets/img/*.svg
 /assets/img/optimized/*
 !/assets/img/optimized/photo-*
+!/assets/img/optimized/brand-*
 
 # misc
 .DS_Store
