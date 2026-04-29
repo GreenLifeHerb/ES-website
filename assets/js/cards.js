@@ -64,9 +64,11 @@
               </div>
               <div class="product-card__applications">
                 <strong>Applications</strong>
-                <p>${item.applications.join(" | ")}</p>
+                <ul class="product-card__application-list">
+                  ${item.applications.map((application) => `<li>${application}</li>`).join("")}
+                </ul>
               </div>
-              <div class="cluster">
+              <div class="cluster product-card__actions">
                 <a class="button button--secondary" href="${item.href}">${item.cta}</a>
                 <a class="button button--primary" href="contact.html?product=${encodeURIComponent(item.ingredient)}#inquiry-form">Request Quote</a>
               </div>

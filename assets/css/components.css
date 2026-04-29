@@ -170,6 +170,14 @@ summary:focus-visible {
   gap: 1rem;
 }
 
+.product-card--brand {
+  min-height: 100%;
+}
+
+.product-card--brand .product-card__media {
+  aspect-ratio: 1.18 / 1;
+}
+
 .brand-kicker {
   color: var(--color-accent-700);
   font-size: 0.82rem;
@@ -184,9 +192,22 @@ summary:focus-visible {
   font-size: 0.92rem;
 }
 
-.product-card__applications p {
+.product-card__application-list {
+  display: grid;
+  gap: 0.3rem;
+  color: var(--color-stone-700);
   font-size: 0.96rem;
-  line-height: 1.6;
+  line-height: 1.55;
+  padding-left: 1rem;
+}
+
+.product-card__application-list li::marker {
+  color: var(--color-accent-700);
+}
+
+.product-card__actions {
+  margin-top: auto;
+  padding-top: 0.25rem;
 }
 
 .product-card p,
