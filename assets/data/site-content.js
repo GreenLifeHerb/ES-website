@@ -28,6 +28,68 @@ window.ESSENCE_SOURCE_CONTENT = {
     "Manufacturing-Backed",
     "B2B Inquiry Workflow",
   ],
+  brandIngredients: [
+    {
+      brand: "SoluxBean",
+      ingredient: "Green Coffee Bean Extract",
+      href: "product-green-coffee.html",
+      image: "assets/img/optimized/photo-green-coffee-extract-1200.webp",
+      alt: "Green coffee bean extract sample and raw material on a laboratory bench",
+      summary:
+        "A branded green coffee ingredient program with water-soluble and decaffeinated options for supplement, beverage, and personal-care development.",
+      markers: ["Chlorogenic acids", "Water-soluble option", "Decaffeinated option"],
+      applications: ["Dietary Supplements", "Functional Beverages", "Personal Care"],
+      cta: "View ingredient",
+    },
+    {
+      brand: "GL NoirFlav",
+      ingredient: "Black Ginger Extract",
+      href: "product-black-ginger.html",
+      image: "assets/img/optimized/photo-black-ginger-extract-1200.webp",
+      alt: "Black ginger extract powder and rhizome material prepared for B2B ingredient review",
+      summary:
+        "A black ginger brand ingredient built around polymethoxyflavone standardization, format flexibility, and differentiated formulation positioning.",
+      markers: ["Polymethoxyflavones", "Water-soluble option", "Concentrated extract"],
+      applications: ["Dietary Supplements", "Functional Foods", "Personal Care"],
+      cta: "View ingredient",
+    },
+    {
+      brand: "NiorGar",
+      ingredient: "Black Garlic Extract",
+      href: "products.html?product=black-garlic-extract",
+      image: "assets/img/optimized/photo-black-ginger-extract-1200.webp",
+      alt: "Black garlic style botanical extract sample for ingredient sourcing review",
+      summary:
+        "Aged black garlic ingredient offered in powder and water-soluble formats for supplement and functional food programs.",
+      markers: ["S-allyl cysteine by inquiry", "Powder option", "Water-soluble option"],
+      applications: ["Dietary Supplements", "Functional Foods", "Powder Blends"],
+      cta: "Request details",
+    },
+    {
+      brand: "Purapple",
+      ingredient: "Apple Polyphenol Extract",
+      href: "products.html?product=apple-fruit-powder",
+      image: "assets/img/optimized/photo-green-coffee-extract-1200.webp",
+      alt: "Apple-origin botanical powder sample for polyphenol ingredient programs",
+      summary:
+        "Apple-derived polyphenol ingredient with water-soluble options and formulation-friendly handling for beverage and supplement teams.",
+      markers: ["Polyphenol standardization", "Phloridzin by inquiry", "Water-soluble option"],
+      applications: ["Dietary Supplements", "Functional Beverages", "Food Formulations"],
+      cta: "Request details",
+    },
+    {
+      brand: "Royal CynarArt",
+      ingredient: "Artichoke Extract",
+      href: "product-artichoke.html",
+      image: "assets/img/optimized/photo-artichoke-extract-1200.webp",
+      alt: "Artichoke extract powder and botanical material for supplement ingredient sourcing",
+      summary:
+        "Mediterranean artichoke ingredient program built around cynarin and chlorogenic-acid positioning for structured botanical sourcing.",
+      markers: ["Cynarin options", "Water-soluble option", "High-purity powder"],
+      applications: ["Dietary Supplements", "Functional Foods", "Botanical Blends"],
+      cta: "View ingredient",
+    },
+  ],
   primaryNav: [
     { href: "products.html", label: "Products" },
     { href: "brand-ingredients.html", label: "Brand Ingredients" },

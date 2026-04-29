@@ -20,6 +20,36 @@
     },
   };
 
+  function ensureSiteIcons() {
+    const icons = [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "assets/img/essence-source-logo.png",
+      },
+      {
+        rel: "apple-touch-icon",
+        href: "assets/img/essence-source-logo.png",
+      },
+    ];
+
+    icons.forEach((icon) => {
+      const selector = `link[rel="${icon.rel}"]`;
+      let link = document.head.querySelector(selector);
+      if (!link) {
+        link = document.createElement("link");
+        link.setAttribute("rel", icon.rel);
+        document.head.appendChild(link);
+      }
+
+      if (icon.type) {
+        link.setAttribute("type", icon.type);
+      }
+
+      link.setAttribute("href", icon.href);
+    });
+  }
+
   function buildHeader() {
     const content = window.ESSENCE_SOURCE_CONTENT;
     const navLinks = content.headerPrimaryNav
@@ -50,7 +80,13 @@
       <header class="site-header">
         <div class="container site-header__inner">
           <a class="site-brand" href="index.html" aria-label="Essence Source home">
-            <span class="site-brand__mark" aria-hidden="true">ES</span>
+            <img
+              class="site-brand__logo"
+              src="assets/img/essence-source-logo.png"
+              alt="Essence Source logo"
+              width="72"
+              height="72"
+            />
             <span class="site-brand__copy">
               <strong>${content.siteName}</strong>
               <span>${content.tagline}</span>
@@ -83,7 +119,16 @@
       <div class="mobile-overlay" data-mobile-overlay data-open="false"></div>
       <aside class="mobile-drawer" id="mobile-navigation" aria-label="Mobile navigation" data-mobile-drawer data-open="false" inert>
         <div class="mobile-drawer__header">
-          <strong>${content.siteName}</strong>
+          <div class="site-brand site-brand--compact">
+            <img
+              class="site-brand__logo"
+              src="assets/img/essence-source-logo.png"
+              alt="Essence Source logo"
+              width="72"
+              height="72"
+            />
+            <strong>${content.siteName}</strong>
+          </div>
           <button class="button button--secondary" type="button" aria-label="Close navigation menu" data-nav-close>Close</button>
         </div>
         <nav class="mobile-nav">
@@ -118,7 +163,13 @@
           <div class="site-footer__grid">
             <section class="stack">
               <div class="site-brand">
-                <span class="site-brand__mark" aria-hidden="true">ES</span>
+                <img
+                  class="site-brand__logo"
+                  src="assets/img/essence-source-logo.png"
+                  alt="Essence Source logo"
+                  width="72"
+                  height="72"
+                />
                 <span class="site-brand__copy">
                   <strong>${content.siteName}</strong>
                   <span>${content.tagline}</span>
@@ -195,6 +246,8 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    ensureSiteIcons();
+
     const headerTarget = document.querySelector("[data-site-header]");
     const footerTarget = document.querySelector("[data-site-footer]");
 

@@ -95,10 +95,34 @@
   object-fit: cover;
 }
 
+.home-brand-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-brand-grid .product-card:first-child,
+.home-brand-grid .product-card:nth-child(2) {
+  grid-column: span 1;
+}
+
+.home-brand-grid .product-card:nth-child(4),
+.home-brand-grid .product-card:nth-child(5) {
+  grid-column: span 1;
+}
+
 @media (max-width: 64rem) {
   .page-grid,
   .split-panel,
   .metric-row {
+    grid-template-columns: 1fr;
+  }
+
+  .home-brand-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 48rem) {
+  .home-brand-grid {
     grid-template-columns: 1fr;
   }
 }

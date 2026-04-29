@@ -43,13 +43,38 @@
   }
 
   async function renderHomeProducts() {
-    const container = document.querySelector("[data-featured-products]");
+    const container = document.querySelector("[data-brand-ingredient-cards]");
     if (!container) return;
-    const products = await window.EssenceSource.fetchJson(
-      "assets/data/products.json",
-    );
-    const featured = products.filter((product) => product.featured).slice(0, 4);
-    container.innerHTML = featured.map(createProductCard).join("");
+    const items = window.ESSENCE_SOURCE_CONTENT.brandIngredients || [];
+    container.innerHTML = items
+      .map(
+        (item) => `
+          <article class="product-card surface product-card--brand">
+            <div class="product-card__media">
+              <img src="${item.image}" alt="${item.alt}" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="brand-kicker">${item.brand}</div>
+              <div>
+                <h3><a href="${item.href}">${item.ingredient}</a></h3>
+                <p>${item.summary}</p>
+              </div>
+              <div class="tag-list">
+                ${item.markers.map((marker) => `<span class="tag">${marker}</span>`).join("")}
+              </div>
+              <div class="product-card__applications">
+                <strong>Applications</strong>
+                <p>${item.applications.join(" | ")}</p>
+              </div>
+              <div class="cluster">
+                <a class="button button--secondary" href="${item.href}">${item.cta}</a>
+                <a class="button button--primary" href="contact.html?product=${encodeURIComponent(item.ingredient)}#inquiry-form">Request Quote</a>
+              </div>
+            </div>
+          </article>
+        `,
+      )
+      .join("");
   }
 
   async function renderBrandIngredients() {
