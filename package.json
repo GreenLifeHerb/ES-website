@@ -1,26 +1,23 @@
 {
-  "name": "es-website",
-  "version": "0.1.0",
+  "name": "essence-source-static-site",
+  "version": "1.0.0",
   "private": true,
+  "description": "Static B2B botanical ingredients website for Essence Source",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.2.4",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "dev": "node server.js",
+    "lint": "node infra/scripts/validate-structured-data.js",
+    "seo:sitemap": "node infra/scripts/generate-sitemap.js",
+    "seo:robots": "node infra/scripts/generate-robots.js",
+    "seo:validate": "node infra/scripts/validate-structured-data.js",
+    "images:optimize": "node infra/scripts/optimize-images.js",
+    "lighthouse": "lhci autorun --config=infra/lighthouserc.json",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "test:e2e": "playwright test"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.4",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.55.0",
+    "prettier": "^3.6.2",
+    "sharp": "^0.33.5"
   }
 }

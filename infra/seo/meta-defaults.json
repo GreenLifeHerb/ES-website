@@ -1,0 +1,13 @@
+{
+  "siteName": "Essence Source",
+  "baseUrl": "https://essencesourceusa.com",
+  "defaultTitle": "Essence Source Botanical Ingredients Supplier in USA",
+  "defaultDescription": "B2B botanical extracts, nutraceutical ingredients, cosmetic ingredients, and fruit and vegetable powders with U.S. warehousing support.",
+  "twitterCard": "summary_large_image",
+  "defaultImage": "https://essencesourceusa.com/assets/img/optimized/photo-hero-botanical-1200.webp",
+  "locale": "en_US",
+  "hreflang": {
+    "en": "https://essencesourceusa.com/",
+    "x-default": "https://essencesourceusa.com/"
+  }
+}

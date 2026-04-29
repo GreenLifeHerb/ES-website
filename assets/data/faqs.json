@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Do you sell directly to consumers?",
+    "answer": "No. Essence Source is positioned as a B2B ingredient sourcing and inquiry website for U.S.-market buyers, not a retail storefront."
+  },
+  {
+    "question": "Do you publish pricing online?",
+    "answer": "No. Pricing depends on specification, order volume, stock position, packaging, and document requirements, so the website focuses on RFQ and sample workflows instead."
+  },
+  {
+    "question": "What documents are available?",
+    "answer": "Typical document paths include COA, TDS, and SDS. Product pages show document availability, and additional files can be requested during the inquiry process."
+  },
+  {
+    "question": "How should I interpret warehouse status?",
+    "answer": "US Warehouse Available means there is a U.S.-side fulfillment path. Available by Inquiry means stock and lead-time details need confirmation. Made to Order means the lot path is specification-dependent."
+  },
+  {
+    "question": "Can you support supplement, food, and cosmetic applications?",
+    "answer": "Yes, within the limits of each ingredient and the intended use. The website avoids market claims and instead focuses on application fit, documentation, and supplier communication."
+  }
+]

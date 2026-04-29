@@ -1,0 +1,43 @@
+:root {
+  --color-ink-950: #10241d;
+  --color-ink-800: #1f3a30;
+  --color-ink-700: #2f5445;
+  --color-ink-600: #49685b;
+  --color-stone-950: #1a1714;
+  --color-stone-800: #433b35;
+  --color-stone-700: #5e534b;
+  --color-stone-600: #776b63;
+  --color-stone-400: #b9aca1;
+  --color-stone-300: #d8cec6;
+  --color-stone-200: #e9e1db;
+  --color-stone-100: #f6f1eb;
+  --color-stone-50: #fcfaf8;
+  --color-accent-500: #3f7c62;
+  --color-accent-600: #30674f;
+  --color-accent-700: #25513f;
+  --color-gold-500: #ab8450;
+  --color-danger-600: #a33420;
+  --color-success-600: #156c46;
+  --shadow-soft: 0 18px 48px rgba(20, 28, 23, 0.08);
+  --shadow-card: 0 10px 30px rgba(25, 33, 30, 0.06);
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.9rem;
+  --radius-lg: 1.4rem;
+  --radius-pill: 999px;
+  --container: 74rem;
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: "Segoe UI", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, monospace;
+  --transition-base: 180ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-base: 0ms linear;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

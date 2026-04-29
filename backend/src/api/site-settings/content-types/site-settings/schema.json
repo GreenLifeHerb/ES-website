@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-settings",
+    "pluralName": "site-settings",
+    "displayName": "Site Settings"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "global_cta_labels": {
+      "type": "json",
+      "default": {}
+    },
+    "legal_disclaimers": {
+      "type": "json",
+      "default": {}
+    },
+    "social_links": {
+      "type": "json",
+      "default": {}
+    },
+    "seo_defaults": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

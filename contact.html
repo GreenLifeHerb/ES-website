@@ -1,0 +1,199 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Essence Source Botanical Ingredients</title>
+    <meta
+      name="description"
+      content="Contact and inquiry page for U.S. B2B buyers requesting botanical ingredient quotes, samples, or COA support."
+    />
+    <meta
+      property="og:title"
+      content="Contact Essence Source Botanical Ingredients"
+    />
+    <meta
+      property="og:description"
+      content="Contact and inquiry page for Essence Source."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://essencesourceusa.com/contact.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Contact Essence Source Botanical Ingredients"
+    />
+    <meta
+      name="twitter:description"
+      content="Contact Essence Source for B2B ingredient quote, sample, and COA requests."
+    />
+    <link rel="canonical" href="https://essencesourceusa.com/contact.html" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Essence Source",
+        "url": "https://essencesourceusa.com",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "hello@essencesourceusa.com",
+            "availableLanguage": ["English"]
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="contact.html">
+    <div class="site-shell">
+      <div data-site-header></div>
+      <main class="site-main" id="main-content">
+        <section class="page-hero">
+          <div class="container page-grid">
+            <div class="section-heading">
+              <div class="section-heading__eyebrow">Contact &amp; inquiry</div>
+              <h1>Request a Quote, Request a Sample, or Ask for COA</h1>
+              <p>
+                The form validates on the front end and is prepared for a future
+                fetch-based integration. Until a live endpoint is connected, it
+                runs in a safe mock mode.
+              </p>
+            </div>
+            <aside class="sidebar-card">
+              <h2>Contact details</h2>
+              <p style="margin-top: 0.75rem">
+                Email:
+                <a href="mailto:hello@essencesourceusa.com"
+                  >hello@essencesourceusa.com</a
+                >
+              </p>
+              <p style="margin-top: 0.5rem">
+                LinkedIn:
+                <a
+                  href="https://www.linkedin.com/company/essence-source/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Essence Source</a
+                >
+              </p>
+              <p style="margin-top: 0.5rem">
+                Response target: one business day.
+              </p>
+            </aside>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <form
+              class="surface"
+              id="inquiry-form"
+              data-form="inquiry"
+              novalidate
+              style="padding: 1.5rem"
+            >
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    data-error-required="Please enter your name."
+                  />
+                  <div class="field__error" data-error-for="name"></div>
+                </div>
+                <div class="field">
+                  <label for="company">Company</label>
+                  <input
+                    id="company"
+                    name="company"
+                    type="text"
+                    required
+                    data-error-required="Please enter your company name."
+                  />
+                  <div class="field__error" data-error-for="company"></div>
+                </div>
+                <div class="field">
+                  <label for="email">Business email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    data-error-required="Please enter a valid business email."
+                    data-error-email="Please enter a valid business email."
+                  />
+                  <div class="field__error" data-error-for="email"></div>
+                </div>
+                <div class="field">
+                  <label for="request-type">Request type</label>
+                  <select
+                    id="request-type"
+                    name="request_type"
+                    required
+                    data-error-required="Please choose a request type."
+                  >
+                    <option value="">Select one</option>
+                    <option value="Quote">Request Quote</option>
+                    <option value="Sample">Request Sample</option>
+                    <option value="COA">Ask for COA</option>
+                  </select>
+                  <div class="field__error" data-error-for="request_type"></div>
+                </div>
+                <div class="field field--full">
+                  <label for="product-interest">Product interest</label>
+                  <input
+                    id="product-interest"
+                    name="product_interest"
+                    type="text"
+                    placeholder="Green Coffee Bean Extract"
+                    data-prefill-product
+                  />
+                  <div
+                    class="field__error"
+                    data-error-for="product_interest"
+                  ></div>
+                </div>
+                <div class="field field--full">
+                  <label for="message">Project details</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    data-error-required="Please enter your project details."
+                    placeholder="Tell us the application, target specification, and document needs."
+                  ></textarea>
+                  <div class="field__error" data-error-for="message"></div>
+                </div>
+              </div>
+              <div
+                class="cluster"
+                style="margin-top: 1rem; align-items: center"
+              >
+                <button class="button button--primary" type="submit">
+                  Submit Inquiry
+                </button>
+                <div class="notice" data-form-status hidden></div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      <div data-site-footer></div>
+    </div>
+    <script src="assets/data/site-content.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/nav.js" defer></script>
+    <script src="assets/js/forms.js" defer></script>
+  </body>
+</html>

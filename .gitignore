@@ -12,6 +12,9 @@
 
 # testing
 /coverage
+/test-results/
+/.playwright-results/
+/.lighthouseci/
 
 # next.js
 /.next/
@@ -19,6 +22,11 @@
 
 # production
 /build
+
+# generated/retired visual assets
+/assets/img/*.svg
+/assets/img/optimized/*
+!/assets/img/optimized/photo-*
 
 # misc
 .DS_Store

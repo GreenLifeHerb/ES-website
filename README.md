@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Essence Source Static Website
 
-## Getting Started
+Static multi-page website for `essencesourceusa.com`, built with native HTML, CSS, and JavaScript for a U.S. B2B botanical ingredients company.
 
-First, run the development server:
+## What is included
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Responsive multi-page marketing and inquiry site
+- Desktop mega menu and mobile drawer navigation
+- Data-driven product listing from `assets/data/products.json`
+- Product filters by category, application, and stock tag
+- Three product detail example pages with shared rendering logic
+- Front-end inquiry form validation with placeholder `fetch` integration
+- FAQ accordion, legal pages, and custom `404.html`
+- Playwright end-to-end tests
+
+## Project structure
+
+```text
+project/
+  index.html
+  products.html
+  product-green-coffee.html
+  product-black-ginger.html
+  product-artichoke.html
+  brand-ingredients.html
+  applications.html
+  warehouse.html
+  quality.html
+  partner.html
+  about.html
+  resources.html
+  contact.html
+  privacy.html
+  terms.html
+  cookies.html
+  accessibility.html
+  404.html
+  package.json
+  package-lock.json
+  server.js
+  playwright.config.js
+  /tests
+  /assets
+    /css
+    /js
+    /img
+    /data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Commands
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+npm run format
+npm run test:e2e
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`npm run dev` starts a lightweight Node static server on `http://127.0.0.1:4173`.
 
-## Learn More
+## Content and handoff notes
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Shared site chrome and reusable text live in [site-content.js](</D:/work/projects/ES website/es-website/assets/data/site-content.js>).
+- Product content is centralized in [products.json](</D:/work/projects/ES website/es-website/assets/data/products.json>).
+- FAQ content is centralized in [faqs.json](</D:/work/projects/ES website/es-website/assets/data/faqs.json>).
+- Inquiry submission currently runs in front-end mock mode and is ready for a future real `fetch` endpoint.
+- Missing business details are intentionally written as `Available by Inquiry`.

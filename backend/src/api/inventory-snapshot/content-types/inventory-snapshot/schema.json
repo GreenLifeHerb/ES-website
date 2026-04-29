@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_snapshots",
+  "info": {
+    "singularName": "inventory-snapshot",
+    "pluralName": "inventory-snapshots",
+    "displayName": "Inventory Snapshot"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "sku": {
+      "type": "string",
+      "required": true
+    },
+    "quantity_status": {
+      "type": "enumeration",
+      "enum": [
+        "in_us_stock",
+        "available_by_inquiry",
+        "pilot_lot_available",
+        "made_to_order"
+      ],
+      "required": true
+    },
+    "lead_time": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "datetime"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product"
+    },
+    "warehouse": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::warehouse-location.warehouse-location",
+      "inversedBy": "inventory_snapshots"
+    }
+  }
+}

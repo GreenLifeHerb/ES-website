@@ -1,0 +1,17 @@
+{
+  "warehouse": "US-East",
+  "items": [
+    {
+      "sku": "GCBE-50-HPLC",
+      "slug": "green-coffee-bean-extract",
+      "status": "in_us_stock",
+      "lead_time": "2-5 business days"
+    },
+    {
+      "sku": "BKG-5-HPLC",
+      "slug": "black-ginger-extract",
+      "status": "available_by_inquiry",
+      "lead_time": "Please confirm"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "categories": [
+    "All Categories",
+    "Botanical Extracts",
+    "Nutraceutical Ingredients",
+    "Cosmetic Ingredients",
+    "Fruit & Vegetable Powders"
+  ],
+  "applications": [
+    "All Applications",
+    "Dietary Supplements",
+    "Functional Beverages",
+    "Food Formulations",
+    "Functional Powders",
+    "Cosmetics & Personal Care"
+  ],
+  "stock_tags": [
+    "All Stock Tags",
+    "US Warehouse Available",
+    "Available by Inquiry",
+    "Made to Order"
+  ]
+}

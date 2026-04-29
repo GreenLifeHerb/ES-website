@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Essence Source",
+  "url": "https://essencesourceusa.com",
+  "logo": "https://essencesourceusa.com/assets/img/optimized/photo-hero-botanical-1200.webp",
+  "description": "B2B supplier of botanical extracts, nutraceutical ingredients, cosmetic ingredients, and fruit and vegetable powders for U.S.-market buyers.",
+  "sameAs": [],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "hello@essencesourceusa.com",
+      "availableLanguage": ["English"]
+    }
+  ]
+}

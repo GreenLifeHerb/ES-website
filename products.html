@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botanical Extract Products in USA | Essence Source</title>
+    <meta
+      name="description"
+      content="Browse botanical extracts, nutraceutical ingredients, cosmetic ingredients, and fruit & vegetable powders by category, application, and stock tag."
+    />
+    <meta
+      property="og:title"
+      content="Botanical Extract Products in USA | Essence Source"
+    />
+    <meta
+      property="og:description"
+      content="Product overview page for Essence Source with B2B product filters and RFQ pathways."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://essencesourceusa.com/products.html"
+    />
+    <link rel="canonical" href="https://essencesourceusa.com/products.html" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body data-page="products.html">
+    <div class="site-shell">
+      <div data-site-header></div>
+      <main class="site-main" id="main-content">
+        <section class="page-hero">
+          <div class="container section-heading">
+            <div class="section-heading__eyebrow">Products</div>
+            <h1>
+              Botanical Extract Product Overview for U.S. Ingredient Buyers
+            </h1>
+            <p>
+              Filter the catalog by category, application, and stock tag. The
+              product listing is rendered from JSON so the front end can later
+              connect to a CMS or API without changing the page structure.
+            </p>
+          </div>
+        </section>
+        <section class="section" data-product-filters>
+          <div class="container stack">
+            <div class="filter-bar">
+              <label class="field">
+                <span>Category</span>
+                <select
+                  id="filter-category"
+                  aria-label="Filter products by category"
+                ></select>
+              </label>
+              <label class="field">
+                <span>Application</span>
+                <select
+                  id="filter-application"
+                  aria-label="Filter products by application"
+                ></select>
+              </label>
+              <label class="field">
+                <span>Stock tag</span>
+                <select
+                  id="filter-stock"
+                  aria-label="Filter products by stock tag"
+                ></select>
+              </label>
+              <div class="filter-bar__count" data-filter-count>
+                0 products shown
+              </div>
+            </div>
+            <div class="card-grid card-grid--3" data-products-grid></div>
+          </div>
+        </section>
+      </main>
+      <div data-site-footer></div>
+    </div>
+    <script src="assets/data/site-content.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/nav.js" defer></script>
+    <script src="assets/js/cards.js" defer></script>
+    <script src="assets/js/filters.js" defer></script>
+  </body>
+</html>
