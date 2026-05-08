@@ -51,6 +51,80 @@
   gap: 0.5rem;
 }
 
+.resource-guide-grid .product-card,
+.resource-note-grid .info-card,
+.resource-step-grid .info-card {
+  height: 100%;
+}
+
+.resource-guide-grid .product-card__body {
+  gap: 1rem;
+}
+
+.resource-detail-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.resource-document-grid {
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: stretch;
+}
+
+.resource-document-stack {
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.resource-note-grid {
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+  gap: 1rem;
+}
+
+.resource-step-card {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.resource-detail-grid .resource-card,
+.resource-document-stack .info-card,
+.resource-step-card {
+  min-width: 0;
+}
+
+.resource-detail-grid .resource-card {
+  padding: 1.6rem;
+}
+
+.resource-detail-grid .resource-card h2 {
+  font-size: clamp(1.7rem, 2.4vw, 2.45rem);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.resource-detail-grid .resource-card p,
+.resource-detail-grid .resource-card li {
+  font-size: 1rem;
+}
+
+.resource-document-grid .image-frame {
+  min-height: 28rem;
+}
+
+.resource-document-stack .section-heading h2 {
+  max-width: 18ch;
+}
+
+.metric-card .lede {
+  margin-top: 0.65rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.resource-card .warehouse-checklist {
+  margin-top: 0.75rem;
+}
+
 .resource-card small {
   color: var(--color-accent-700);
   font-weight: 700;
@@ -81,6 +155,7 @@
 }
 
 .image-frame {
+  position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(67, 59, 53, 0.12);
@@ -93,6 +168,32 @@
   height: 100%;
   display: block;
   object-fit: cover;
+}
+
+.split-panel--hero {
+  align-items: center;
+}
+
+.image-frame--hero {
+  min-height: 22rem;
+  aspect-ratio: 1.05 / 1;
+}
+
+.warehouse-checklist {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  color: var(--color-stone-700);
+  line-height: 1.7;
+  padding-left: 1.1rem;
+}
+
+.warehouse-checklist li::marker {
+  color: var(--color-accent-700);
+}
+
+.warehouse-checklist--dense {
+  margin-top: 1.25rem;
 }
 
 .home-brand-grid {
@@ -113,11 +214,94 @@
   grid-column: 4 / span 2;
 }
 
+.application-card {
+  min-height: 100%;
+}
+
+.application-card .product-card__media {
+  aspect-ratio: 1.25 / 1;
+}
+
+.application-card .product-card__media img {
+  object-fit: cover;
+}
+
+.application-card--supplement .product-card__media img {
+  object-position: center 42%;
+}
+
+.application-card--beverage .product-card__media img {
+  object-position: center 50%;
+}
+
+.application-card--food .product-card__media img {
+  object-position: center 48%;
+}
+
+.application-card--cosmetic .product-card__media img {
+  object-position: center 44%;
+}
+
+.application-card .product-card__body {
+  gap: 1rem;
+}
+
+.application-card__list {
+  display: grid;
+  gap: 0.4rem;
+  padding-left: 1rem;
+  color: var(--color-stone-700);
+  line-height: 1.55;
+}
+
+.application-card__list li::marker {
+  color: var(--color-accent-700);
+}
+
+.doc-card .tag-list {
+  gap: 0.5rem;
+}
+
+.doc-card .tag {
+  background: rgba(246, 241, 235, 0.86);
+}
+
+.section-heading--compact {
+  max-width: none;
+}
+
+.section-heading--compact h2 {
+  font-size: clamp(1.55rem, 2.2vw, 2.3rem);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.quality-support-card {
+  min-width: 0;
+}
+
+.quality-support-card .lede {
+  font-size: 1rem;
+}
+
 @media (max-width: 64rem) {
   .page-grid,
   .split-panel,
   .metric-row {
     grid-template-columns: 1fr;
+  }
+
+  .resource-detail-grid,
+  .resource-document-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-document-grid .image-frame {
+    min-height: 20rem;
+  }
+
+  .image-frame--hero {
+    aspect-ratio: 1.45 / 1;
   }
 
   .home-brand-grid {
@@ -134,5 +318,10 @@
 @media (max-width: 48rem) {
   .home-brand-grid {
     grid-template-columns: 1fr;
+  }
+
+  .image-frame--hero {
+    aspect-ratio: 1.25 / 1;
+    min-height: 0;
   }
 }

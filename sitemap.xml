@@ -2,104 +2,116 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://essencesourceusa.com/</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/products.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/product-green-coffee.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/product-black-ginger.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/product-artichoke.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://essencesourceusa.com/product-black-garlic.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://essencesourceusa.com/product-apple-fruit.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/brand-ingredients.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/applications.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/warehouse.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/quality.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/partner.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/about.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/resources.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/contact.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/privacy.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.2</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/terms.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.2</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/cookies.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.2</priority>
   </url>
   <url>
     <loc>https://essencesourceusa.com/accessibility.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.2</priority>
   </url>
 </urlset>

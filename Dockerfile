@@ -15,7 +15,9 @@ COPY cookies.html ./
 COPY index.html ./
 COPY partner.html ./
 COPY privacy.html ./
+COPY product-apple-fruit.html ./
 COPY product-artichoke.html ./
+COPY product-black-garlic.html ./
 COPY product-black-ginger.html ./
 COPY product-green-coffee.html ./
 COPY products.html ./

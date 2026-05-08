@@ -99,8 +99,8 @@
             ${navLinks}
           </nav>
           <div class="site-actions">
-            <a class="site-nav__link site-nav__link--desktop-wide" href="quality.html#document-request">Ask for COA</a>
-            <a class="button button--primary" href="contact.html#inquiry-form">Request Quote</a>
+            <a class="site-nav__link site-nav__link--desktop-wide" href="contact.html?inquiry_type=docs#inquiry-form">Ask for COA</a>
+            <a class="button button--primary" href="contact.html?inquiry_type=quote#inquiry-form">Request Quote</a>
             <button class="button button--secondary menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu" data-nav-toggle>
               Menu
             </button>
@@ -134,8 +134,8 @@
         <nav class="mobile-nav">
           <a href="products.html">Products Overview</a>
           ${mobileLinks}
-          <a href="quality.html#document-request">Ask for COA</a>
-          <a href="contact.html#inquiry-form">Request Quote</a>
+          <a href="contact.html?inquiry_type=docs#inquiry-form">Ask for COA</a>
+          <a href="contact.html?inquiry_type=quote#inquiry-form">Request Quote</a>
         </nav>
       </aside>
     `;
@@ -211,7 +211,7 @@
 
   function renderTrustBadges() {
     const container = document.querySelector("[data-trust-badges]");
-    if (!container) return;
+    if (!container || container.children.length) return;
 
     container.innerHTML = window.ESSENCE_SOURCE_CONTENT.trustBadges
       .map((item) => `<li class="trust-badge">${item}</li>`)
@@ -220,7 +220,7 @@
 
   function renderResourceCards() {
     const container = document.querySelector("[data-resource-cards]");
-    if (!container) return;
+    if (!container || container.children.length) return;
 
     container.innerHTML = window.ESSENCE_SOURCE_CONTENT.resources
       .map(
@@ -236,13 +236,15 @@
       .join("");
   }
 
-  function prefillProductField() {
+  function prefillQueryFields() {
     const params = new URLSearchParams(window.location.search);
-    const value = params.get("product");
-    const input = document.querySelector("[data-prefill-product]");
-    if (value && input) {
-      input.value = value;
-    }
+    document.querySelectorAll("[data-prefill-query]").forEach((field) => {
+      const param = field.getAttribute("data-prefill-query");
+      const value = params.get(param);
+      if (value) {
+        field.value = value;
+      }
+    });
   }
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -266,6 +268,6 @@
     renderTrustBadges();
     renderResourceCards();
     markActiveLinks();
-    prefillProductField();
+    prefillQueryFields();
   });
 })();

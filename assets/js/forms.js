@@ -1,7 +1,13 @@
 (function () {
   function validateField(field) {
-    const value = field.value.trim();
-    if (field.hasAttribute("required") && !value) {
+    const value =
+      field.type === "checkbox" ? String(field.checked) : field.value.trim();
+
+    if (field.type === "checkbox" && field.hasAttribute("required") && !field.checked) {
+      return field.dataset.errorRequired || "This field is required.";
+    }
+
+    if (field.hasAttribute("required") && field.type !== "checkbox" && !value) {
       return field.dataset.errorRequired || "This field is required.";
     }
 
@@ -25,14 +31,40 @@
     field.setAttribute("aria-invalid", String(Boolean(message)));
   }
 
-  async function submitPlaceholder(form, payload) {
-    const { endpoints, forms } = window.ESSENCE_SOURCE_CONTENT;
-    if (forms.mockMode) {
-      await new Promise((resolve) => window.setTimeout(resolve, 200));
-      return { ok: true };
+  function buildEndpointUrl() {
+    const { api = {}, endpoints } = window.ESSENCE_SOURCE_CONTENT;
+    const baseUrl = (api.baseUrl || "").trim();
+    const path = endpoints.inquiry;
+
+    if (!path) {
+      throw new Error("Inquiry endpoint is not configured.");
     }
 
-    return fetch(endpoints.inquiry, {
+    if (/^https?:\/\//i.test(path)) {
+      return path;
+    }
+
+    if (baseUrl) {
+      return `${baseUrl.replace(/\/$/, "")}${path.startsWith("/") ? path : `/${path}`}`;
+    }
+
+    return path;
+  }
+
+  async function submitInquiry(payload) {
+    const { forms } = window.ESSENCE_SOURCE_CONTENT;
+    if (forms.mockMode) {
+      await new Promise((resolve) => window.setTimeout(resolve, 200));
+      return {
+        ok: true,
+        json: async () => ({
+          success: true,
+          ticket_id: "MOCK-0000",
+        }),
+      };
+    }
+
+    return fetch(buildEndpointUrl(), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -43,8 +75,12 @@
     const data = new FormData(form);
     const payload = {};
     data.forEach((value, key) => {
-      payload[key] = String(value);
+      payload[key] = String(value).trim();
     });
+    form.querySelectorAll("input[type='checkbox']").forEach((field) => {
+      payload[field.name] = field.checked;
+    });
+    payload.source_page = window.location.href;
     return payload;
   }
 
@@ -62,6 +98,15 @@
       status.hidden = true;
       status.textContent = "";
     }
+  }
+
+  function applyServerErrors(form, errors) {
+    Object.entries(errors || {}).forEach(([name, message]) => {
+      const field = form.querySelector(`[name='${name}']`);
+      if (field) {
+        showError(field, message);
+      }
+    });
   }
 
   function initForms() {
@@ -93,15 +138,19 @@
 
         try {
           const payload = serialize(form);
-          const response = await submitPlaceholder(form, payload);
+          const response = await submitInquiry(payload);
+          const data = await response.json().catch(() => ({}));
           if (!response.ok) {
+            applyServerErrors(form, data.errors);
             throw new Error("Request failed");
           }
           form.reset();
           updateStatus(
             form,
             "success",
-            window.ESSENCE_SOURCE_CONTENT.forms.successMessage,
+            data.ticket_id
+              ? `${window.ESSENCE_SOURCE_CONTENT.forms.successMessage} Ticket: ${data.ticket_id}.`
+              : window.ESSENCE_SOURCE_CONTENT.forms.successMessage,
           );
         } catch (error) {
           updateStatus(

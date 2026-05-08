@@ -1,36 +1,44 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Resources and FAQ for Botanical Ingredient Buyers | Essence Source
+      Buyer Guides and Botanical Ingredient FAQ | Essence Source
     </title>
     <meta
       name="description"
-      content="Resources page with FAQ, buyer guidance, and content placeholders for later CMS or API-driven expansion."
+      content="Buyer guides, documentation notes, and sourcing FAQs for U.S. botanical ingredient teams reviewing sample, document, and RFQ paths."
     />
     <meta
       property="og:title"
-      content="Resources and FAQ for Botanical Ingredient Buyers | Essence Source"
+      content="Buyer Guides and Botanical Ingredient FAQ | Essence Source"
     />
     <meta
       property="og:description"
-      content="Resource and FAQ page for Essence Source."
+      content="A practical resource hub for botanical ingredient buyers reviewing documentation, application fit, and supplier communication."
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
       content="https://essencesourceusa.com/resources.html"
     />
+    <meta
+      property="og:image"
+      content="https://essencesourceusa.com/assets/img/optimized/photo-quality-lab-1200.webp"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Resources and FAQ for Botanical Ingredient Buyers | Essence Source"
+      content="Buyer Guides and Botanical Ingredient FAQ | Essence Source"
     />
     <meta
       name="twitter:description"
-      content="B2B resources and FAQ for botanical ingredient sourcing teams."
+      content="Practical sourcing notes for supplement, beverage, food, and personal-care ingredient teams."
+    />
+    <meta
+      name="twitter:image"
+      content="https://essencesourceusa.com/assets/img/optimized/photo-quality-lab-1200.webp"
     />
     <link rel="canonical" href="https://essencesourceusa.com/resources.html" />
     <script type="application/ld+json">
@@ -61,6 +69,42 @@
               "@type": "Answer",
               "text": "Typical document paths include COA, TDS, and SDS. Product pages show document availability, and additional files can be requested during the inquiry process."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "How should I interpret warehouse status?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "US Warehouse Available means there is a U.S.-side fulfillment path. Available by Inquiry means stock and lead-time details need confirmation. Made to Order means the lot path is specification-dependent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you support supplement, food, and cosmetic applications?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, within the limits of each ingredient and the intended use. The website avoids market claims and instead focuses on application fit, documentation, and supplier communication."
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://essencesourceusa.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "https://essencesourceusa.com/resources.html"
           }
         ]
       }
@@ -76,57 +120,638 @@
       <div data-site-header></div>
       <main class="site-main" id="main-content">
         <section class="page-hero">
-          <div class="container section-heading">
-            <div class="section-heading__eyebrow">Resources</div>
-            <h1>
-              Resources, Blog List, and FAQ Structure for B2B Ingredient Buyers
-            </h1>
-            <p>
-              This page doubles as a content hub and a handoff point for future
-              CMS-driven blog or resource expansion.
-            </p>
+          <div class="container split-panel split-panel--hero">
+            <div class="section-heading stack">
+              <div class="section-heading__eyebrow">Resources</div>
+              <h1>Buyer Guides, Documentation Notes, and Sourcing FAQ</h1>
+              <p>
+                This page is built for the review work that happens before a
+                team sends an RFQ: supplier screening, document expectations,
+                application-fit questions, and commercial alignment between
+                sourcing, QA, and product teams.
+              </p>
+              <div class="cluster">
+                <a class="button button--primary" href="contact.html?inquiry_type=contact#inquiry-form"
+                  >Start an Inquiry</a
+                >
+                <a class="button button--secondary" href="quality.html"
+                  >Review Quality Path</a
+                >
+              </div>
+            </div>
+            <div class="image-frame image-frame--hero">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    assets/img/optimized/photo-quality-lab-480.webp 480w,
+                    assets/img/optimized/photo-quality-lab-768.webp 768w,
+                    assets/img/optimized/photo-quality-lab-1200.webp 1200w
+                  "
+                  sizes="(max-width: 768px) 100vw, 38vw"
+                />
+                <img
+                  src="assets/img/optimized/photo-quality-lab-1200.jpg"
+                  alt="Laboratory review setting with botanical samples and document workflow materials"
+                  width="1200"
+                  height="675"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
           </div>
         </section>
+
         <section class="section">
           <div class="container">
-            <div class="card-grid card-grid--3" data-resource-cards></div>
+            <div class="metric-row">
+              <article class="metric-card">
+                <span>Buyer focus</span>
+                <strong>Document clarity</strong>
+                <p class="lede">
+                  Buyers usually want to know which files can be shared and how
+                  those files connect to the next qualification step.
+                </p>
+              </article>
+              <article class="metric-card">
+                <span>Commercial focus</span>
+                <strong>Sample alignment</strong>
+                <p class="lede">
+                  Better sample requests happen when application, specification,
+                  and target review criteria are already defined.
+                </p>
+              </article>
+              <article class="metric-card">
+                <span>Supply focus</span>
+                <strong>Stock path signal</strong>
+                <p class="lede">
+                  U.S. warehouse availability, replenishment logic, and lead
+                  time assumptions all shape the first RFQ conversation.
+                </p>
+              </article>
+              <article class="metric-card">
+                <span>Workflow focus</span>
+                <strong>Fewer loops</strong>
+                <p class="lede">
+                  This hub is designed to shorten the back-and-forth between
+                  procurement, QA, and commercialization teams.
+                </p>
+              </article>
+            </div>
           </div>
         </section>
+
         <section class="section">
-          <div class="container legal-layout">
-            <article
-              class="legal-card resource-card"
-              id="guide-supplier-evaluation"
-            >
-              <small>Guide</small>
-              <h2>
-                How U.S. B2B Buyers Evaluate Botanical Ingredient Suppliers
-              </h2>
+          <div class="container">
+            <div class="section-heading">
+              <div class="section-heading__eyebrow">Buyer guides</div>
+              <h2>Use these pages to narrow the first conversation</h2>
               <p>
-                Buyers usually start with product identity, then move to
-                document path, stock signal, and responsiveness. The front-end
-                structure here is designed to support exactly that evaluation
-                path.
+                These guides are written to help U.S. ingredient buyers ask
+                sharper questions earlier. They are not blog filler. They are
+                meant to reduce confusion around documents, stock language, and
+                sample planning before internal review starts.
               </p>
+            </div>
+            <div class="card-grid card-grid--3 resource-guide-grid" style="margin-top: 2rem">
+              <article class="product-card">
+                <div class="product-card__media">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        assets/img/optimized/photo-us-warehouse-480.webp 480w,
+                        assets/img/optimized/photo-us-warehouse-768.webp 768w,
+                        assets/img/optimized/photo-us-warehouse-1200.webp 1200w
+                      "
+                      sizes="(max-width: 768px) 100vw, 31vw"
+                    />
+                    <img
+                      src="assets/img/optimized/photo-us-warehouse-1200.jpg"
+                      alt="Warehouse and fulfillment setting for U.S. stock route evaluation"
+                      width="1200"
+                      height="675"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="product-card__body">
+                  <div class="brand-kicker">Guide 01</div>
+                  <h3>How U.S. buyers qualify a botanical ingredient supplier</h3>
+                  <p>
+                    A practical commercial checklist covering specification
+                    visibility, document path, U.S. stock language, and the
+                    supplier’s ability to support QA follow-up.
+                  </p>
+                  <ul class="application-card__list">
+                    <li>Specification and marker review</li>
+                    <li>Document availability signal</li>
+                    <li>Sample and stock-route alignment</li>
+                  </ul>
+                  <a class="button button--secondary" href="#guide-supplier-evaluation"
+                    >Read the guide</a
+                  >
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        assets/img/optimized/photo-green-coffee-extract-480.webp 480w,
+                        assets/img/optimized/photo-green-coffee-extract-768.webp 768w,
+                        assets/img/optimized/photo-green-coffee-extract-1200.webp 1200w
+                      "
+                      sizes="(max-width: 768px) 100vw, 31vw"
+                    />
+                    <img
+                      src="assets/img/optimized/photo-green-coffee-extract-1200.jpg"
+                      alt="Green coffee extract sample review setup"
+                      width="1200"
+                      height="675"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="product-card__body">
+                  <div class="brand-kicker">Guide 02</div>
+                  <h3>What to prepare before requesting a sample</h3>
+                  <p>
+                    A useful sample request starts with the intended format,
+                    target specification, and the exact document questions the
+                    team needs answered.
+                  </p>
+                  <ul class="application-card__list">
+                    <li>Format and application context</li>
+                    <li>COA, TDS, or SDS needs</li>
+                    <li>Timeline and first-review objective</li>
+                  </ul>
+                  <a class="button button--secondary" href="#guide-sample-request"
+                    >Read the guide</a
+                  >
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        assets/img/optimized/photo-quality-lab-480.webp 480w,
+                        assets/img/optimized/photo-quality-lab-768.webp 768w,
+                        assets/img/optimized/photo-quality-lab-1200.webp 1200w
+                      "
+                      sizes="(max-width: 768px) 100vw, 31vw"
+                    />
+                    <img
+                      src="assets/img/optimized/photo-quality-lab-1200.jpg"
+                      alt="Documentation and QA review environment for botanical ingredients"
+                      width="1200"
+                      height="675"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="product-card__body">
+                  <div class="brand-kicker">Guide 03</div>
+                  <h3>How to read document and stock labels before outreach</h3>
+                  <p>
+                    Buyers often need a simple translation layer for terms like
+                    COA, TDS, SDS, Available by Inquiry, and U.S. warehouse
+                    support.
+                  </p>
+                  <ul class="application-card__list">
+                    <li>COA, TDS, and SDS roles</li>
+                    <li>What Available by Inquiry means</li>
+                    <li>When stock language needs confirmation</li>
+                  </ul>
+                  <a class="button button--secondary" href="#document-path"
+                    >Review documentation notes</a
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container split-panel resource-detail-grid">
+            <article class="legal-card resource-card" id="guide-supplier-evaluation">
+              <small>Guide</small>
+              <h2>How U.S. B2B buyers evaluate a botanical ingredient supplier</h2>
+              <p>
+                Most teams do not start with branding. They start with product
+                identity, specification confidence, document readiness, and
+                whether the supplier can explain the most likely commercial
+                path without creating extra loops.
+              </p>
+              <ul class="warehouse-checklist warehouse-checklist--dense">
+                <li>Can we understand the product identity quickly?</li>
+                <li>Are the key document types clearly signaled?</li>
+                <li>Is there a realistic U.S. stock or replenishment path?</li>
+                <li>Can QA questions be handled without guesswork?</li>
+                <li>Does the supplier communicate next steps clearly?</li>
+              </ul>
             </article>
             <article class="legal-card resource-card" id="guide-sample-request">
               <small>Guide</small>
-              <h2>What to Ask Before Requesting a Sample</h2>
+              <h2>What to prepare before requesting a sample</h2>
               <p>
-                Typical questions include target specification, dosage format,
-                desired documents, expected launch timeline, and whether a
-                U.S.-warehouse path is preferred.
+                A sample request is more productive when the buyer already knows
+                the intended use, the document path they need, and what they
+                want the first review to confirm. That reduces back-and-forth
+                and helps match the request to the right product path.
               </p>
+              <ul class="warehouse-checklist warehouse-checklist--dense">
+                <li>Target specification or marker expectation</li>
+                <li>Application, dosage form, or formulation context</li>
+                <li>COA, TDS, SDS, or declaration needs</li>
+                <li>Sample quantity and review timeline</li>
+                <li>Whether the request is exploratory or launch-driven</li>
+              </ul>
             </article>
           </div>
         </section>
+
+        <section class="section" id="document-path">
+          <div class="container split-panel resource-document-grid">
+            <div class="image-frame">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    assets/img/optimized/photo-manufacturing-partner-480.webp 480w,
+                    assets/img/optimized/photo-manufacturing-partner-768.webp 768w,
+                    assets/img/optimized/photo-manufacturing-partner-1200.webp 1200w
+                  "
+                  sizes="(max-width: 768px) 100vw, 42vw"
+                />
+                <img
+                  src="assets/img/optimized/photo-manufacturing-partner-1200.jpg"
+                  alt="Manufacturing and laboratory context supporting documentation review"
+                  width="1200"
+                  height="675"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="stack resource-document-stack">
+              <div class="section-heading section-heading--compact">
+                <div class="section-heading__eyebrow">Documentation notes</div>
+                <h2>Documentation only helps when it is tied to the buying path</h2>
+              </div>
+              <p class="lede">
+                Buyers are usually not asking for files in the abstract. They
+                are trying to decide whether a product is worth screening, how
+                fast internal review can move, and whether a sample or quote
+                request makes sense next.
+              </p>
+              <div class="card-grid card-grid--3 resource-note-grid">
+                <article class="info-card doc-card">
+                  <h3>COA</h3>
+                  <p>
+                    Used to understand batch-level analytical results when a
+                    buyer is already narrowing the product and wants more review
+                    confidence.
+                  </p>
+                </article>
+                <article class="info-card doc-card">
+                  <h3>TDS</h3>
+                  <p>
+                    Often the fastest first document for product identity,
+                    specification format, and commercial comparison across
+                    multiple options.
+                  </p>
+                </article>
+                <article class="info-card doc-card">
+                  <h3>SDS</h3>
+                  <p>
+                    Important when internal safety, handling, and logistics
+                    review needs to move in parallel with sourcing discussion.
+                  </p>
+                </article>
+              </div>
+              <div class="tag-list">
+                <span class="tag">COA path</span>
+                <span class="tag">TDS review</span>
+                <span class="tag">SDS request</span>
+                <span class="tag">Declaration needs</span>
+                <span class="tag">Stock confirmation</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-heading">
+              <div class="section-heading__eyebrow">Application notes</div>
+              <h2>Different teams ask different questions first</h2>
+              <p>
+                Application context changes the first screening logic. The same
+                ingredient may be reviewed very differently by a supplement,
+                beverage, food, or personal-care team.
+              </p>
+            </div>
+            <div class="card-grid card-grid--4" style="margin-top: 2rem">
+              <article class="product-card application-card application-card--supplement">
+                <div class="product-card__media">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        assets/img/optimized/photo-black-ginger-extract-480.webp 480w,
+                        assets/img/optimized/photo-black-ginger-extract-768.webp 768w,
+                        assets/img/optimized/photo-black-ginger-extract-1200.webp 1200w
+                      "
+                      sizes="(max-width: 768px) 100vw, 23vw"
+                    />
+                    <img
+                      src="assets/img/optimized/photo-black-ginger-extract-1200.jpg"
+                      alt="Black ginger extract powder and raw material for supplement ingredient screening"
+                      width="1200"
+                      height="675"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="product-card__body">
+                  <h3>Supplements</h3>
+                  <p>
+                    Marker language, document path, format options, and a clear
+                    sample workflow usually matter first.
+                  </p>
+                </div>
+              </article>
+              <article class="product-card application-card application-card--beverage">
+                <div class="product-card__media">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        assets/img/optimized/photo-green-coffee-extract-480.webp 480w,
+                        assets/img/optimized/photo-green-coffee-extract-768.webp 768w,
+                        assets/img/optimized/photo-green-coffee-extract-1200.webp 1200w
+                      "
+                      sizes="(max-width: 768px) 100vw, 23vw"
+                    />
+                    <img
+                      src="assets/img/optimized/photo-green-coffee-extract-1200.jpg"
+                      alt="Green coffee ingredient and powder for beverage format review"
+                      width="1200"
+                      height="675"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="product-card__body">
+                  <h3>Functional beverages</h3>
+                  <p>
+                    Solubility, appearance, origin story, and how quickly a
+                    supplier can respond become central very early.
+                  </p>
+                </div>
+              </article>
+              <article class="product-card application-card application-card--food">
+                <div class="product-card__media">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        assets/img/optimized/photo-artichoke-extract-480.webp 480w,
+                        assets/img/optimized/photo-artichoke-extract-768.webp 768w,
+                        assets/img/optimized/photo-artichoke-extract-1200.webp 1200w
+                      "
+                      sizes="(max-width: 768px) 100vw, 23vw"
+                    />
+                    <img
+                      src="assets/img/optimized/photo-artichoke-extract-1200.jpg"
+                      alt="Artichoke ingredient and powder suited to food formulation review"
+                      width="1200"
+                      height="675"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="product-card__body">
+                  <h3>Food formulations</h3>
+                  <p>
+                    Teams often screen for practical sourcing continuity,
+                    handling fit, and whether the RFQ path is realistic for the
+                    intended system.
+                  </p>
+                </div>
+              </article>
+              <article class="product-card application-card application-card--cosmetic">
+                <div class="product-card__media">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="
+                        assets/img/optimized/photo-hero-botanical-480.webp 480w,
+                        assets/img/optimized/photo-hero-botanical-768.webp 768w,
+                        assets/img/optimized/photo-hero-botanical-1200.webp 1200w
+                      "
+                      sizes="(max-width: 768px) 100vw, 23vw"
+                    />
+                    <img
+                      src="assets/img/optimized/photo-hero-botanical-1200.jpg"
+                      alt="Botanical powders and amber bottles for personal-care ingredient screening"
+                      width="1200"
+                      height="675"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="product-card__body">
+                  <h3>Personal care</h3>
+                  <p>
+                    Even outside supplements, disciplined document handling and
+                    precise supplier communication still shape the review path.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-heading">
+              <div class="section-heading__eyebrow">Commercial workflow</div>
+              <h2>Keep the review path connected from shortlist to first PO</h2>
+              <p>
+                Better sourcing conversations happen when product screening,
+                document review, and stock-path confirmation are kept in one
+                decision chain instead of being handled as disconnected tasks.
+              </p>
+            </div>
+            <div class="card-grid card-grid--4 resource-step-grid" style="margin-top: 2rem">
+              <article class="info-card resource-step-card">
+                <span class="brand-kicker">Step 01</span>
+                <h3>Shortlist the product</h3>
+                <p>
+                  Start with identity, specification, and application fit before
+                  asking for batch-level depth.
+                </p>
+              </article>
+              <article class="info-card resource-step-card">
+                <span class="brand-kicker">Step 02</span>
+                <h3>Define the sample need</h3>
+                <p>
+                  Clarify format, quantity, intended use, and which review
+                  question the sample needs to answer.
+                </p>
+              </article>
+              <article class="info-card resource-step-card">
+                <span class="brand-kicker">Step 03</span>
+                <h3>Align documents and timing</h3>
+                <p>
+                  Keep COA, TDS, SDS, declarations, and stock confirmation tied
+                  to the same qualification path.
+                </p>
+              </article>
+              <article class="info-card resource-step-card">
+                <span class="brand-kicker">Step 04</span>
+                <h3>Move to RFQ with context</h3>
+                <p>
+                  A quote request is more useful when the technical and
+                  commercial unknowns have already been narrowed.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section class="section">
           <div class="container">
             <div class="section-heading">
               <div class="section-heading__eyebrow">FAQ</div>
-              <h2>Reusable FAQ accordion</h2>
+              <h2>Short answers to recurring sourcing questions</h2>
+              <p>
+                These are written to reduce confusion before a buyer reaches
+                out, especially around pricing visibility, document access, and
+                stock terminology.
+              </p>
             </div>
-            <div class="faq-list" style="margin-top: 2rem" data-faq-list></div>
+            <div class="faq-list" style="margin-top: 2rem" data-faq-list>
+              <article class="faq-item">
+                <button
+                  class="faq-question"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-resource-0"
+                >
+                  <span>Do you sell directly to consumers?</span>
+                  <span aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-resource-0" hidden>
+                  <p>
+                    No. Essence Source is positioned as a B2B ingredient
+                    sourcing and inquiry website for U.S.-market buyers, not a
+                    retail storefront.
+                  </p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button
+                  class="faq-question"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-resource-1"
+                >
+                  <span>Do you publish pricing online?</span>
+                  <span aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-resource-1" hidden>
+                  <p>
+                    No. Pricing depends on specification, order volume, stock
+                    position, packaging, and document requirements, so the
+                    website focuses on RFQ and sample workflows instead.
+                  </p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button
+                  class="faq-question"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-resource-2"
+                >
+                  <span>What documents are available?</span>
+                  <span aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-resource-2" hidden>
+                  <p>
+                    Typical document paths include COA, TDS, and SDS. Product
+                    pages show document availability, and additional files can
+                    be requested during the inquiry process.
+                  </p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button
+                  class="faq-question"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-resource-3"
+                >
+                  <span>How should I interpret warehouse status?</span>
+                  <span aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-resource-3" hidden>
+                  <p>
+                    U.S. Warehouse Available means there is a U.S.-side
+                    fulfillment path. Available by Inquiry means stock and lead
+                    time details need confirmation. Made to Order means the lot
+                    path is specification-dependent.
+                  </p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button
+                  class="faq-question"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="faq-resource-4"
+                >
+                  <span>
+                    Can you support supplement, food, and cosmetic applications?
+                  </span>
+                  <span aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-resource-4" hidden>
+                  <p>
+                    Yes, within the limits of each ingredient and the intended
+                    use. The website avoids market claims and instead focuses on
+                    application fit, documentation, and supplier communication.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="cta-banner">
+              <h2>Need a direct answer for sourcing, QA, or first-sample review?</h2>
+              <p>
+                Tell us the product, intended application, and the exact file or
+                commercial question your team needs next. We can align the
+                inquiry with the right product page, document path, and RFQ
+                follow-up.
+              </p>
+              <div class="cluster" style="margin-top: 1.25rem">
+                <a class="button button--primary" href="contact.html?inquiry_type=contact#inquiry-form"
+                  >Start an Inquiry</a
+                >
+                <a class="button button--secondary" href="warehouse.html"
+                  >Review Warehouse Path</a
+                >
+              </div>
+            </div>
           </div>
         </section>
       </main>

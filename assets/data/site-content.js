@@ -10,15 +10,16 @@ window.ESSENCE_SOURCE_CONTENT = {
     linkedInUrl: "https://www.linkedin.com/company/essence-source/",
     responseTime: "Typical reply within one business day",
   },
+  api: {
+    baseUrl: "",
+  },
   endpoints: {
-    inquiry: "/api/inquiry",
-    sample: "/api/sample",
-    documents: "/api/documents",
+    inquiry: "/api/public/inquiries",
   },
   forms: {
-    mockMode: true,
+    mockMode: false,
     successMessage:
-      "Thanks. Your request has been recorded in front-end demo mode. Connect the placeholder fetch endpoint when the CRM or email workflow is ready.",
+      "Thanks. Your inquiry has been submitted. Our team will review it and follow up by email.",
     errorMessage:
       "The request could not be completed. Please try again or email hello@essencesourceusa.com.",
   },
@@ -56,7 +57,7 @@ window.ESSENCE_SOURCE_CONTENT = {
     {
       brand: "NiorGar",
       ingredient: "Black Garlic Extract",
-      href: "products.html?product=black-garlic-extract",
+      href: "product-black-garlic.html",
       image: "assets/img/optimized/brand-niorgar-1200.webp",
       alt: "Black garlic extract powder with aged garlic bulbs and sample bottle on a laboratory bench",
       summary:
@@ -68,7 +69,7 @@ window.ESSENCE_SOURCE_CONTENT = {
     {
       brand: "Purapple",
       ingredient: "Apple Polyphenol Extract",
-      href: "products.html?product=apple-fruit-powder",
+      href: "product-apple-fruit.html",
       image: "assets/img/optimized/brand-purapple-1200.webp",
       alt: "Apple polyphenol extract powder with fresh apple slices and amber sample bottle",
       summary:
@@ -135,10 +136,10 @@ window.ESSENCE_SOURCE_CONTENT = {
       {
         title: "Commercial Actions",
         links: [
-          { href: "contact.html#inquiry-form", label: "Request Quote" },
-          { href: "contact.html#inquiry-form", label: "Request Sample" },
+          { href: "contact.html?inquiry_type=quote#inquiry-form", label: "Request Quote" },
+          { href: "contact.html?inquiry_type=sample#inquiry-form", label: "Request Sample" },
           {
-            href: "quality.html#document-request",
+            href: "contact.html?inquiry_type=docs#inquiry-form",
             label: "Ask for COA / TDS / SDS",
           },
           { href: "warehouse.html", label: "Review U.S. warehousing path" },
@@ -183,7 +184,7 @@ window.ESSENCE_SOURCE_CONTENT = {
       title: "Document Path: COA, TDS, SDS, and Available by Inquiry",
       url: "quality.html#document-request",
       summary:
-        "How to interpret the site’s documentation labels and stock tags.",
+        "How to interpret the site's documentation labels and stock tags.",
     },
   ],
   legalLinks: [

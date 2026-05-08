@@ -14,14 +14,65 @@
     />
     <meta
       property="og:description"
-      content="Product overview page for Essence Source with B2B product filters and RFQ pathways."
+      content="Browse botanical extracts, nutraceutical ingredients, cosmetic ingredients, and fruit and vegetable powders for U.S. B2B sourcing."
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
       content="https://essencesourceusa.com/products.html"
     />
+    <meta
+      property="og:image"
+      content="https://essencesourceusa.com/assets/img/optimized/photo-green-coffee-extract-1200.webp"
+    />
     <link rel="canonical" href="https://essencesourceusa.com/products.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Botanical Extract Products in USA | Essence Source"
+    />
+    <meta
+      name="twitter:description"
+      content="Browse commercial botanical ingredient options by category, application, and stock tag."
+    />
+    <meta
+      name="twitter:image"
+      content="https://essencesourceusa.com/assets/img/optimized/photo-green-coffee-extract-1200.webp"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Botanical Extract Products in USA",
+        "url": "https://essencesourceusa.com/products.html",
+        "description": "Commercial product overview for botanical extracts, nutraceutical ingredients, cosmetic ingredients, and fruit and vegetable powders.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Essence Source",
+          "url": "https://essencesourceusa.com/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://essencesourceusa.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://essencesourceusa.com/products.html"
+          }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/tokens.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
@@ -39,9 +90,10 @@
               Botanical Extract Product Overview for U.S. Ingredient Buyers
             </h1>
             <p>
-              Filter the catalog by category, application, and stock tag. The
-              product listing is rendered from JSON so the front end can later
-              connect to a CMS or API without changing the page structure.
+              Browse core botanical extracts, nutraceutical ingredients,
+              cosmetic-use materials, and fruit and vegetable powders. Use the
+              filters to narrow by category, application, and current stock tag,
+              then move directly to specification review or RFQ.
             </p>
           </div>
         </section>
@@ -53,27 +105,279 @@
                 <select
                   id="filter-category"
                   aria-label="Filter products by category"
-                ></select>
+                >
+                  <option value="">All Categories</option>
+                  <option value="Botanical Extracts">Botanical Extracts</option>
+                  <option value="Nutraceutical Ingredients">Nutraceutical Ingredients</option>
+                  <option value="Cosmetic Ingredients">Cosmetic Ingredients</option>
+                  <option value="Fruit &amp; Vegetable Powders">Fruit &amp; Vegetable Powders</option>
+                </select>
               </label>
               <label class="field">
                 <span>Application</span>
                 <select
                   id="filter-application"
                   aria-label="Filter products by application"
-                ></select>
+                >
+                  <option value="">All Applications</option>
+                  <option value="Dietary Supplements">Dietary Supplements</option>
+                  <option value="Functional Beverages">Functional Beverages</option>
+                  <option value="Food Formulations">Food Formulations</option>
+                  <option value="Functional Powders">Functional Powders</option>
+                  <option value="Cosmetics &amp; Personal Care">Cosmetics &amp; Personal Care</option>
+                </select>
               </label>
               <label class="field">
                 <span>Stock tag</span>
                 <select
                   id="filter-stock"
                   aria-label="Filter products by stock tag"
-                ></select>
+                >
+                  <option value="">All Stock Tags</option>
+                  <option value="US Warehouse Available">US Warehouse Available</option>
+                  <option value="Available by Inquiry">Available by Inquiry</option>
+                  <option value="Made to Order">Made to Order</option>
+                </select>
               </label>
               <div class="filter-bar__count" data-filter-count>
-                0 products shown
+                10 products shown
               </div>
             </div>
-            <div class="card-grid card-grid--3" data-products-grid></div>
+            <div class="card-grid card-grid--3" data-products-grid>
+              <article class="product-card surface" data-product-card data-category="Botanical Extracts" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Functional Beverages|Food Formulations">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of green coffee bean extract powder and raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Botanical Extracts</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-green-coffee.html">Green Coffee Bean Extract</a></h3>
+                    <p>Standardized green coffee ingredient for supplement and beverage development with documentation-ready supply.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Functional Beverages</span>
+                    <span class="tag">Food Formulations</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-green-coffee.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Green%20Coffee%20Bean%20Extract&inquiry_type=sample#inquiry-form">Request Sample</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Nutraceutical Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Functional Powders">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-black-ginger-extract-1200.webp" alt="Representative photo-style visual of black ginger extract powder and rhizome material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Nutraceutical Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-black-ginger.html">Black Ginger Extract</a></h3>
+                    <p>A differentiated black ginger extract for nutraceutical formulation teams comparing standardization, format, and documentation support.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Functional Powders</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-black-ginger.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Black%20Ginger%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Botanical Extracts" data-stock="US Warehouse Available" data-applications="Dietary Supplements|Food Formulations">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of artichoke extract powder and botanical material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Botanical Extracts</span>
+                    <span class="status-pill status-pill--warehouse">US Warehouse Available</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-artichoke.html">Artichoke Extract</a></h3>
+                    <p>Standardized artichoke ingredient with cynarin and chlorogenic acid positioning for supplement programs.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Food Formulations</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-artichoke.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Artichoke%20Extract&inquiry_type=docs#inquiry-form">Ask for COA</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Nutraceutical Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Food Formulations">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/brand-niorgar-1200.webp" alt="Black garlic extract powder with aged garlic bulbs and sample bottle on a laboratory bench" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Nutraceutical Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-black-garlic.html">Black Garlic Extract</a></h3>
+                    <p>Aged garlic extract for supplement and functional food programs that need a clear document and inquiry path.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Food Formulations</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-black-garlic.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Black%20Garlic%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Fruit &amp; Vegetable Powders" data-stock="Available by Inquiry" data-applications="Functional Beverages|Food Formulations">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/brand-purapple-1200.webp" alt="Apple polyphenol extract powder with fresh apple slices and amber sample bottle" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Fruit &amp; Vegetable Powders</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-apple-fruit.html">Apple Polyphenol Extract</a></h3>
+                    <p>Apple-derived polyphenol ingredient option for beverage, gummy, and food formulation teams that need a clearer document path.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Functional Beverages</span>
+                    <span class="tag">Food Formulations</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-apple-fruit.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Apple%20Polyphenol%20Extract&inquiry_type=sample#inquiry-form">Request Sample</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Fruit &amp; Vegetable Powders" data-stock="Made to Order" data-applications="Functional Beverages|Food Formulations">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of plant powder sample and botanical raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Fruit &amp; Vegetable Powders</span>
+                    <span class="status-pill status-pill--lead">Made to Order</span>
+                  </div>
+                  <div>
+                    <h3>Beet Root Powder</h3>
+                    <p>Vegetable powder option for beverage systems and functional food prototypes comparing color, handling, and sourcing path.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Functional Beverages</span>
+                    <span class="tag">Food Formulations</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="contact.html?product=Beet%20Root%20Powder&inquiry_type=contact#inquiry-form">Request details</a>
+                    <a class="button button--primary" href="contact.html?product=Beet%20Root%20Powder&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Nutraceutical Ingredients" data-stock="US Warehouse Available" data-applications="Dietary Supplements">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-black-ginger-extract-1200.webp" alt="Representative photo-style visual of botanical root extract powder and raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Nutraceutical Ingredients</span>
+                    <span class="status-pill status-pill--warehouse">US Warehouse Available</span>
+                  </div>
+                  <div>
+                    <h3>Ashwagandha Root Extract</h3>
+                    <p>Established nutraceutical ingredient with U.S.-market RFQ support, sample handling, and batch-document follow-up.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="contact.html?product=Ashwagandha%20Root%20Extract&inquiry_type=contact#inquiry-form">Request details</a>
+                    <a class="button button--primary" href="contact.html?product=Ashwagandha%20Root%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Botanical Extracts" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Functional Beverages">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of botanical extract powder sample and raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Botanical Extracts</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3>Elderberry Extract</h3>
+                    <p>Berry-origin extract positioned for gummies, powders, and beverage-adjacent supplement formats.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Functional Beverages</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="contact.html?product=Elderberry%20Extract&inquiry_type=contact#inquiry-form">Request details</a>
+                    <a class="button button--primary" href="contact.html?product=Elderberry%20Extract&inquiry_type=sample#inquiry-form">Request Sample</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Cosmetic Ingredients" data-stock="Available by Inquiry" data-applications="Cosmetics &amp; Personal Care">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of green botanical extract powder and leaf material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Cosmetic Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3>Rosemary Extract</h3>
+                    <p>Botanical ingredient option for personal-care teams screening technical document availability and sourcing responsiveness.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Cosmetics &amp; Personal Care</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="contact.html?product=Rosemary%20Extract&inquiry_type=contact#inquiry-form">Request details</a>
+                    <a class="button button--primary" href="contact.html?product=Rosemary%20Extract&inquiry_type=docs#inquiry-form">Ask for COA</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Botanical Extracts" data-stock="US Warehouse Available" data-applications="Dietary Supplements|Food Formulations">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of botanical seed extract powder and raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Botanical Extracts</span>
+                    <span class="status-pill status-pill--warehouse">US Warehouse Available</span>
+                  </div>
+                  <div>
+                    <h3>Grape Seed Extract</h3>
+                    <p>Polyphenol-position ingredient for established supplement categories, with sample and quote workflows ready.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Food Formulations</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="contact.html?product=Grape%20Seed%20Extract&inquiry_type=contact#inquiry-form">Request details</a>
+                    <a class="button button--primary" href="contact.html?product=Grape%20Seed%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="empty-state" data-products-empty hidden>
+              <h2>No matching products</h2>
+              <p>Try a broader filter or contact us for an inquiry-based match.</p>
+            </div>
           </div>
         </section>
       </main>
@@ -82,7 +386,6 @@
     <script src="assets/data/site-content.js" defer></script>
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/nav.js" defer></script>
-    <script src="assets/js/cards.js" defer></script>
     <script src="assets/js/filters.js" defer></script>
   </body>
 </html>

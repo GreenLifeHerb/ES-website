@@ -38,6 +38,8 @@
       "green-coffee-bean-extract": "product-green-coffee.html",
       "black-ginger-extract": "product-black-ginger.html",
       "artichoke-extract": "product-artichoke.html",
+      "black-garlic-extract": "product-black-garlic.html",
+      "apple-fruit-powder": "product-apple-fruit.html",
     };
     return fileMap[slug] || `products.html?product=${encodeURIComponent(slug)}`;
   }
@@ -109,6 +111,18 @@
       .join("");
   }
 
+  async function renderWarehouseProducts() {
+    const container = document.querySelector("[data-warehouse-products]");
+    if (!container) return;
+    const products = await window.EssenceSource.fetchJson(
+      "assets/data/products.json",
+    );
+    const warehouseProducts = products
+      .filter((product) => product.warehouse_status === "US Warehouse Available")
+      .slice(0, 3);
+    container.innerHTML = warehouseProducts.map(createProductCard).join("");
+  }
+
   async function renderProductDetail() {
     const detailRoot = document.querySelector("[data-product-detail]");
     if (!detailRoot) return;
@@ -174,6 +188,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     renderHomeProducts();
     renderBrandIngredients();
+    renderWarehouseProducts();
     renderProductDetail();
   });
 

@@ -323,3 +323,29 @@ Current tests cover:
 - Add a persistent Redis-backed limiter if inquiry volume grows beyond the in-memory limiter placeholder.
 - Replace the default email transport envs with your transactional provider credentials or adapter.
 - Keep internal endpoints off the public frontend and protect them with API key rotation.
+
+## Frontend Inquiry Integration
+
+The static website form is designed to post to:
+
+```text
+POST /api/public/inquiries
+```
+
+To receive real submissions:
+
+1. Set `MAIL_TO` to the inbox that should receive new leads.
+2. Configure `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, and `MAIL_FROM`.
+3. Set `FRONTEND_ORIGINS` to include the production frontend domain.
+4. Point the frontend form config to the deployed Strapi base URL if the frontend and backend are on different domains.
+
+Example:
+
+```env
+MAIL_TO=sales@your-domain.com
+SMTP_HOST=smtp.your-provider.com
+SMTP_PORT=587
+SMTP_USER=sales@your-domain.com
+SMTP_PASS=your-app-password
+FRONTEND_ORIGINS=https://essencesourceusa.com
+```

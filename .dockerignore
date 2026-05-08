@@ -13,3 +13,4 @@ playwright.config.js
 package-lock.json
 .env
 .env.*
+assets/img/*.png

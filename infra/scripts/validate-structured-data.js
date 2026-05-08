@@ -26,6 +26,9 @@ function assert(condition, message) {
 }
 
 function validateCanonical(fileName, html) {
+  if (/<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html)) {
+    return;
+  }
   assert(/<link\s+rel=["']canonical["']\s+href=["'][^"']+["']\s*\/?>/i.test(html), `${fileName}: missing canonical`);
 }
 

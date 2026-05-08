@@ -21,6 +21,10 @@
       property="og:url"
       content="https://essencesourceusa.com/contact.html"
     />
+    <meta
+      property="og:image"
+      content="https://essencesourceusa.com/assets/img/optimized/photo-quality-lab-1200.webp"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -30,19 +34,49 @@
       name="twitter:description"
       content="Contact Essence Source for B2B ingredient quote, sample, and COA requests."
     />
+    <meta
+      name="twitter:image"
+      content="https://essencesourceusa.com/assets/img/optimized/photo-quality-lab-1200.webp"
+    />
     <link rel="canonical" href="https://essencesourceusa.com/contact.html" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Essence Source",
-        "url": "https://essencesourceusa.com",
-        "contactPoint": [
+        "@type": "ContactPage",
+        "name": "Contact Essence Source Botanical Ingredients",
+        "url": "https://essencesourceusa.com/contact.html",
+        "description": "Contact page for quote requests, sample requests, and document requests related to Essence Source botanical ingredients.",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Essence Source",
+          "url": "https://essencesourceusa.com",
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "email": "hello@essencesourceusa.com",
+              "availableLanguage": ["English"]
+            }
+          ]
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
           {
-            "@type": "ContactPoint",
-            "contactType": "sales",
-            "email": "hello@essencesourceusa.com",
-            "availableLanguage": ["English"]
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://essencesourceusa.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://essencesourceusa.com/contact.html"
           }
         ]
       }
@@ -63,9 +97,9 @@
               <div class="section-heading__eyebrow">Contact &amp; inquiry</div>
               <h1>Request a Quote, Request a Sample, or Ask for COA</h1>
               <p>
-                The form validates on the front end and is prepared for a future
-                fetch-based integration. Until a live endpoint is connected, it
-                runs in a safe mock mode.
+                Use this form to start a quote, sample, or document request.
+                When the live inquiry API is configured, submissions can be
+                recorded in the backend and forwarded to the sales inbox.
               </p>
             </div>
             <aside class="sidebar-card">
@@ -136,19 +170,33 @@
                   <div class="field__error" data-error-for="email"></div>
                 </div>
                 <div class="field">
-                  <label for="request-type">Request type</label>
+                  <label for="inquiry-type">Request type</label>
                   <select
-                    id="request-type"
-                    name="request_type"
+                    id="inquiry-type"
+                    name="inquiry_type"
+                    data-prefill-query="inquiry_type"
                     required
                     data-error-required="Please choose a request type."
                   >
                     <option value="">Select one</option>
-                    <option value="Quote">Request Quote</option>
-                    <option value="Sample">Request Sample</option>
-                    <option value="COA">Ask for COA</option>
+                    <option value="quote">Request Quote</option>
+                    <option value="sample">Request Sample</option>
+                    <option value="docs">Ask for COA / TDS / SDS</option>
+                    <option value="contact">General Contact</option>
                   </select>
-                  <div class="field__error" data-error-for="request_type"></div>
+                  <div class="field__error" data-error-for="inquiry_type"></div>
+                </div>
+                <div class="field">
+                  <label for="application">Application</label>
+                  <input
+                    id="application"
+                    name="application"
+                    type="text"
+                    required
+                    placeholder="Capsules, gummies, functional beverage, powder blend"
+                    data-error-required="Please enter the intended application."
+                  />
+                  <div class="field__error" data-error-for="application"></div>
                 </div>
                 <div class="field field--full">
                   <label for="product-interest">Product interest</label>
@@ -158,6 +206,9 @@
                     type="text"
                     placeholder="Green Coffee Bean Extract"
                     data-prefill-product
+                    data-prefill-query="product"
+                    required
+                    data-error-required="Please enter the product you want to discuss."
                   />
                   <div
                     class="field__error"
@@ -174,6 +225,37 @@
                     placeholder="Tell us the application, target specification, and document needs."
                   ></textarea>
                   <div class="field__error" data-error-for="message"></div>
+                </div>
+                <div class="field field--full" style="display: none">
+                  <label for="website">Website</label>
+                  <input
+                    id="website"
+                    name="website"
+                    type="text"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="field field--full">
+                  <label
+                    for="consent"
+                    style="display: flex; gap: 0.75rem; align-items: flex-start"
+                  >
+                    <input
+                      id="consent"
+                      name="consent"
+                      type="checkbox"
+                      required
+                      data-error-required="Please confirm that we may respond to this inquiry."
+                      style="margin-top: 0.2rem"
+                    />
+                    <span>
+                      I agree that Essence Source may use this information to
+                      respond to my inquiry and follow up about the requested
+                      products or documents.
+                    </span>
+                  </label>
+                  <div class="field__error" data-error-for="consent"></div>
                 </div>
               </div>
               <div

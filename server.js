@@ -5,6 +5,7 @@ const zlib = require("node:zlib");
 
 const rootDir = __dirname;
 const port = Number(process.env.PORT || 4173);
+const inquiryProxyUrl = process.env.INQUIRY_API_URL || "";
 
 const contentTypes = {
   ".html": "text/html; charset=utf-8",
@@ -58,7 +59,64 @@ function sendFile(request, response, filePath, statusCode = 200) {
   });
 }
 
+function readRequestBody(request) {
+  return new Promise((resolve, reject) => {
+    const chunks = [];
+    request.on("data", (chunk) => chunks.push(chunk));
+    request.on("end", () => resolve(Buffer.concat(chunks).toString("utf8")));
+    request.on("error", reject);
+  });
+}
+
+async function proxyInquiry(request, response) {
+  if (!inquiryProxyUrl) {
+    response.writeHead(503, { "Content-Type": "application/json; charset=utf-8" });
+    response.end(
+      JSON.stringify({
+        success: false,
+        message: "Inquiry API is not configured on this server.",
+      }),
+    );
+    return;
+  }
+
+  try {
+    const body = await readRequestBody(request);
+    const upstreamResponse = await fetch(inquiryProxyUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body,
+    });
+
+    const text = await upstreamResponse.text();
+    response.writeHead(upstreamResponse.status, {
+      "Content-Type":
+        upstreamResponse.headers.get("content-type") || "application/json; charset=utf-8",
+      "Cache-Control": "no-cache",
+    });
+    response.end(text);
+  } catch (error) {
+    response.writeHead(502, { "Content-Type": "application/json; charset=utf-8" });
+    response.end(
+      JSON.stringify({
+        success: false,
+        message: "Unable to reach the inquiry service.",
+      }),
+    );
+  }
+}
+
 const server = http.createServer((request, response) => {
+  if (
+    request.method === "POST" &&
+    (request.url || "").split("?")[0] === "/api/public/inquiries"
+  ) {
+    proxyInquiry(request, response);
+    return;
+  }
+
   const filePath = resolvePath(request.url || "/");
 
   fs.stat(filePath, (error, stats) => {

@@ -34,14 +34,14 @@ test("product filters reduce the visible list", async ({ page }) => {
   await page.goto("/products.html", { waitUntil: "domcontentloaded" });
   await expect(page.locator("[data-product-card]")).toHaveCount(10);
   await page.selectOption("#filter-category", "Fruit & Vegetable Powders");
-  await expect(page.locator("[data-product-card]")).toHaveCount(2);
+  await expect(page.locator("[data-product-card]:visible")).toHaveCount(2);
 });
 
 test("contact form shows errors for empty required fields", async ({
   page,
 }) => {
   await page.goto("/contact.html", { waitUntil: "domcontentloaded" });
-  await page.getByRole("button", { name: /submit inquiry/i }).click();
+  await page.locator("button[type='submit']").click();
   await expect(page.locator("[data-error-for='name']")).toContainText(
     "Please enter your name.",
   );
@@ -68,6 +68,11 @@ test("all core pages have a title", async ({ page }) => {
   const pages = [
     "/",
     "/products.html",
+    "/product-green-coffee.html",
+    "/product-black-ginger.html",
+    "/product-artichoke.html",
+    "/product-black-garlic.html",
+    "/product-apple-fruit.html",
     "/brand-ingredients.html",
     "/applications.html",
     "/warehouse.html",
