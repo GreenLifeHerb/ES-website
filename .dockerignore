@@ -10,7 +10,6 @@ test-results
 tests
 npm-debug.log
 playwright.config.js
-package-lock.json
 .env
 .env.*
 assets/img/*.png
