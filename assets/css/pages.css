@@ -284,6 +284,66 @@
   font-size: 1rem;
 }
 
+.notes-terms-card {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.notes-terms-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-stone-700);
+  line-height: 1.65;
+}
+
+.notes-terms-list li::marker {
+  color: var(--color-accent-700);
+}
+
+.collection-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.collection-grid--compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.collection-card,
+.collection-link-card {
+  display: grid;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.collection-card small,
+.collection-link-card strong {
+  color: var(--color-accent-700);
+}
+
+.collection-link-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.faq-static-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-static-list h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.15;
+}
+
+.faq-static-list p {
+  margin-top: 0.45rem;
+}
+
 @media (max-width: 64rem) {
   .page-grid,
   .split-panel,
@@ -298,6 +358,11 @@
 
   .resource-document-grid .image-frame {
     min-height: 20rem;
+  }
+
+  .collection-grid,
+  .collection-grid--compact {
+    grid-template-columns: 1fr;
   }
 
   .image-frame--hero {

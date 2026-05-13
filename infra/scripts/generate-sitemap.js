@@ -7,25 +7,16 @@ const path = require("node:path");
 const projectRoot = path.resolve(__dirname, "../..");
 const defaults = require("../seo/meta-defaults.json");
 
-const coreRoutes = [
-  "/",
-  "/products.html",
-  "/product-green-coffee.html",
-  "/product-black-ginger.html",
-  "/product-artichoke.html",
-  "/brand-ingredients.html",
-  "/applications.html",
-  "/warehouse.html",
-  "/quality.html",
-  "/partner.html",
-  "/about.html",
-  "/resources.html",
-  "/contact.html",
-  "/privacy.html",
-  "/terms.html",
-  "/cookies.html",
-  "/accessibility.html",
-];
+function discoverHtmlRoutes() {
+  return fs
+    .readdirSync(projectRoot)
+    .filter((file) => file.endsWith(".html"))
+    .filter((file) => file !== "404.html")
+    .map((file) => (file === "index.html" ? "/" : `/${file}`))
+    .sort((a, b) => a.localeCompare(b));
+}
+
+const coreRoutes = discoverHtmlRoutes();
 
 function escapeXml(value) {
   return String(value)
@@ -78,8 +69,8 @@ function buildSitemap(routes, baseUrl) {
       (route) => `  <url>
     <loc>${escapeXml(toUrl(baseUrl, route))}</loc>
     <lastmod>${getLastMod(route)}</lastmod>
-    <changefreq>${route === "/" ? "weekly" : "monthly"}</changefreq>
-    <priority>${route === "/" ? "1.0" : "0.7"}</priority>
+    <changefreq>${getChangefreq(route)}</changefreq>
+    <priority>${getPriority(route)}</priority>
   </url>`,
     )
     .join("\n");
@@ -89,6 +80,50 @@ function buildSitemap(routes, baseUrl) {
 ${urls}
 </urlset>
 `;
+}
+
+function getPriority(route) {
+  if (route === "/") return "1.0";
+  if (route === "/products.html") return "0.95";
+  if (
+    route === "/brand-ingredients.html" ||
+    route === "/specialty-ingredients.html" ||
+    route === "/specification-extracts.html" ||
+    route === "/natural-mushrooms.html"
+  ) {
+    return "0.92";
+  }
+  if (route.startsWith("/product-")) return "0.82";
+  if (
+    route === "/applications.html" ||
+    route === "/warehouse.html" ||
+    route === "/quality.html"
+  ) {
+    return "0.78";
+  }
+  if (
+    route === "/privacy.html" ||
+    route === "/terms.html" ||
+    route === "/cookies.html" ||
+    route === "/accessibility.html"
+  ) {
+    return "0.2";
+  }
+  return "0.72";
+}
+
+function getChangefreq(route) {
+  if (
+    route === "/" ||
+    route === "/products.html" ||
+    route === "/brand-ingredients.html" ||
+    route === "/specialty-ingredients.html" ||
+    route === "/specification-extracts.html" ||
+    route === "/natural-mushrooms.html"
+  ) {
+    return "weekly";
+  }
+  return "monthly";
 }
 
 function writeOutput(content, outputPath) {

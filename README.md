@@ -58,13 +58,45 @@ npm run test:e2e
 
 `npm run dev` starts a lightweight Node static server on `http://127.0.0.1:4173`.
 
+## Production inquiry wiring
+
+Recommended production split:
+
+- frontend: `https://essencesourceusa.com`
+- Strapi CMS/API: `https://cms.essencesourceusa.com`
+
 To forward inquiry submissions from the static site to a deployed Strapi backend, set:
 
 ```bash
-INQUIRY_API_URL=https://your-strapi-domain.com/api/public/inquiries
+INQUIRY_API_URL=https://cms.essencesourceusa.com/api/public/inquiries
 ```
 
 and then start the site server. The site server will proxy `POST /api/public/inquiries` to that backend URL.
+
+If the frontend is deployed on Cloud Run, add `INQUIRY_API_URL` as an environment variable on the frontend service.
+
+## Direct email mode
+
+If you want the website to send inquiry emails directly without Strapi, leave `INQUIRY_API_URL` empty and set:
+
+```bash
+SMTP_HOST=your-smtp-host
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=your-smtp-user
+SMTP_PASS=your-smtp-password
+MAIL_FROM=sales@your-domain.com
+MAIL_TO=sales@your-domain.com
+FRONTEND_ORIGINS=https://essencesourceusa.com,https://www.essencesourceusa.com
+INQUIRY_RATE_LIMIT_WINDOW_MS=900000
+INQUIRY_RATE_LIMIT_MAX=10
+```
+
+Notes:
+
+- `MAIL_FROM` should usually match the mailbox or domain your SMTP provider allows you to send from.
+- For real delivery reliability, your domain should have correct SPF/DKIM/DMARC records configured with your mail provider.
+- The Docker image now installs production dependencies, which is required for `nodemailer` to exist at runtime.
 
 ## Content and handoff notes
 

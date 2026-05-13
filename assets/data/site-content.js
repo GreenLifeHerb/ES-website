@@ -5,7 +5,7 @@ window.ESSENCE_SOURCE_CONTENT = {
   description:
     "Essence Source is a botanical ingredients website for U.S. B2B buyers seeking documentation-ready sourcing with U.S. warehousing support and manufacturing-backed supply.",
   contact: {
-    email: "hello@essencesourceusa.com",
+    email: "info@essencesourceusa.com",
     linkedInLabel: "Essence Source on LinkedIn",
     linkedInUrl: "https://www.linkedin.com/company/essence-source/",
     responseTime: "Typical reply within one business day",
@@ -21,7 +21,17 @@ window.ESSENCE_SOURCE_CONTENT = {
     successMessage:
       "Thanks. Your inquiry has been submitted. Our team will review it and follow up by email.",
     errorMessage:
-      "The request could not be completed. Please try again or email hello@essencesourceusa.com.",
+      "The request could not be completed. Please try again or email info@essencesourceusa.com.",
+  },
+  notesTerms: {
+    title: "Notes & Terms",
+    items: [
+      "Minimum order quantities (MOQ) apply per product. Please contact us for details.",
+      "All specifications listed represent available grades; custom specifications can be arranged.",
+      "COA, MSDS, and third-party testing reports are available upon request.",
+      "Products are suitable for dietary supplement, functional food, and cosmetic applications.",
+      "For pricing, availability, and sample requests, please reach out via our official contact channels.",
+    ],
   },
   trustBadges: [
     "US Warehousing Support",
@@ -37,8 +47,8 @@ window.ESSENCE_SOURCE_CONTENT = {
       image: "assets/img/optimized/photo-green-coffee-extract-1200.webp",
       alt: "Green coffee bean extract sample and raw material on a laboratory bench",
       summary:
-        "Branded green coffee bean extract program with chlorogenic-acid positioning, water-soluble options, and decaffeinated formats for structured B2B sourcing.",
-      markers: ["Chlorogenic acids", "Water-soluble option", "Decaffeinated option"],
+        "Two green coffee bean extract options for B2B programs: chlorogenic acids 50% decaffeinated and chlorogenic acids 35% water-soluble.",
+      markers: ["Chlorogenic acids >= 50%", "Decaffeinated", "Chlorogenic acids >= 35% water-soluble"],
       applications: ["Dietary Supplements", "Functional Beverages", "Personal Care"],
       cta: "View ingredient",
     },
@@ -49,8 +59,8 @@ window.ESSENCE_SOURCE_CONTENT = {
       image: "assets/img/optimized/photo-black-ginger-extract-1200.webp",
       alt: "Black ginger extract powder and rhizome material prepared for B2B ingredient review",
       summary:
-        "Black ginger extract program built around polymethoxyflavone standardization, concentrated extract options, and formulation-ready handling.",
-      markers: ["Polymethoxyflavones", "Water-soluble option", "Concentrated extract"],
+        "Black ginger extract standardized to 5,7-dimethoxyflavone with three commercial grades for differentiated nutraceutical positioning.",
+      markers: ["5,7-Dimethoxyflavone >= 1%", "5,7-Dimethoxyflavone >= 2.5%", "5,7-Dimethoxyflavone >= 5%"],
       applications: ["Dietary Supplements", "Functional Foods", "Personal Care"],
       cta: "View ingredient",
     },
@@ -61,8 +71,8 @@ window.ESSENCE_SOURCE_CONTENT = {
       image: "assets/img/optimized/brand-niorgar-1200.webp",
       alt: "Black garlic extract powder with aged garlic bulbs and sample bottle on a laboratory bench",
       summary:
-        "Aged black garlic extract offered in powder and water-soluble formats for supplement, functional food, and blend programs.",
-      markers: ["S-allyl cysteine by inquiry", "Powder option", "Water-soluble option"],
+        "Aged black garlic extract built around S-allyl cysteine content for supplement, functional food, and blend applications.",
+      markers: ["SAC 0.1%", "SAC 0.5%", "SAC 1.0%"],
       applications: ["Dietary Supplements", "Functional Foods", "Powder Blends"],
       cta: "Request details",
     },
@@ -73,8 +83,8 @@ window.ESSENCE_SOURCE_CONTENT = {
       image: "assets/img/optimized/brand-purapple-1200.webp",
       alt: "Apple polyphenol extract powder with fresh apple slices and amber sample bottle",
       summary:
-        "Apple-derived polyphenol extract with water-soluble options and formulation-friendly handling for beverage, supplement, and food teams.",
-      markers: ["Polyphenol standardization", "Phloridzin by inquiry", "Water-soluble option"],
+        "Apple polyphenol extract standardized to high total polyphenols for beverage, supplement, and food formulation teams.",
+      markers: ["Polyphenol 70%", "Apple-derived extract", "Formulation-ready powder"],
       applications: ["Dietary Supplements", "Functional Beverages", "Food Formulations"],
       cta: "Request details",
     },
@@ -85,8 +95,8 @@ window.ESSENCE_SOURCE_CONTENT = {
       image: "assets/img/optimized/photo-artichoke-extract-1200.webp",
       alt: "Artichoke extract powder and botanical material for supplement ingredient sourcing",
       summary:
-        "Artichoke extract program built around cynarin options and structured botanical sourcing for supplement and functional food teams.",
-      markers: ["Cynarin options", "Water-soluble option", "High-purity powder"],
+        "Artichoke extract program with two cynarin grades for botanical supplement and functional food sourcing.",
+      markers: ["Cynarin 2.5%", "Cynarin 5.0%", "Structured B2B supply"],
       applications: ["Dietary Supplements", "Functional Foods", "Botanical Blends"],
       cta: "View ingredient",
     },
@@ -115,6 +125,22 @@ window.ESSENCE_SOURCE_CONTENT = {
       {
         title: "Product Categories",
         links: [
+          {
+            href: "brand-ingredients.html",
+            label: "Brand Ingredients",
+          },
+          {
+            href: "specialty-ingredients.html",
+            label: "Specialty Ingredients",
+          },
+          {
+            href: "specification-extracts.html",
+            label: "Specification Extracts",
+          },
+          {
+            href: "natural-mushrooms.html",
+            label: "Natural Mushrooms",
+          },
           {
             href: "products.html?category=Botanical%20Extracts",
             label: "Botanical Extracts",

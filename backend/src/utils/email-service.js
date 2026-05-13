@@ -35,7 +35,7 @@ async function sendInquiryNotification(inquiry) {
 
   await transporter.sendMail({
     from: process.env.MAIL_FROM || "no-reply@essencesourceusa.com",
-    to: process.env.MAIL_TO || "hello@essencesourceusa.com",
+    to: process.env.MAIL_TO || "info@essencesourceusa.com",
     replyTo: inquiry.email,
     subject: `[Essence Source] ${inquiry.inquiry_type} inquiry from ${inquiry.company}`,
     text: [

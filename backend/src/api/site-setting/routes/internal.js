@@ -7,7 +7,6 @@ module.exports = {
       path: "/internal/revalidate",
       handler: "internal.revalidate",
       config: {
-        auth: false,
         policies: ["global::internal-api-key"],
       },
     },

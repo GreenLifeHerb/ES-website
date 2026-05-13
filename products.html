@@ -73,6 +73,30 @@
         ]
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How should buyers use the products page?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use the products page as a commercial overview. Filter by category, application, and stock tag, then open the matching product page for specification review, document requests, and inquiry submission."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are all products stocked in the United States?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Products are tagged as US Warehouse Available, Available by Inquiry, or Made to Order so buyers can screen the likely supply path before contacting the team."
+            }
+          }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/tokens.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
@@ -99,6 +123,20 @@
         </section>
         <section class="section" data-product-filters>
           <div class="container stack">
+            <section class="info-card">
+              <h2>Choose the right buying path first</h2>
+              <p style="margin-top: 0.85rem;">
+                The full catalog is useful for broad comparison, but most buyers move faster
+                when they enter through a focused collection page first and then narrow down
+                to the product detail pages that match the intended application and spec range.
+              </p>
+              <div class="collection-grid collection-grid--compact" style="margin-top: 1.25rem;">
+                <a class="info-card collection-link-card" href="brand-ingredients.html"><strong>Brand Ingredients</strong><span>Featured hero products and stronger positioning</span></a>
+                <a class="info-card collection-link-card" href="specialty-ingredients.html"><strong>Specialty Ingredients</strong><span>Differentiated actives for premium programs</span></a>
+                <a class="info-card collection-link-card" href="specification-extracts.html"><strong>Specification Extracts</strong><span>Practical ratio extracts and classic botanicals</span></a>
+                <a class="info-card collection-link-card" href="natural-mushrooms.html"><strong>Natural Mushrooms</strong><span>Functional mushroom category overview</span></a>
+              </div>
+            </section>
             <div class="filter-bar">
               <label class="field">
                 <span>Category</span>
@@ -109,6 +147,9 @@
                   <option value="">All Categories</option>
                   <option value="Botanical Extracts">Botanical Extracts</option>
                   <option value="Nutraceutical Ingredients">Nutraceutical Ingredients</option>
+                  <option value="Specialty Ingredients">Specialty Ingredients</option>
+                  <option value="Specification Extracts">Specification Extracts</option>
+                  <option value="Natural Mushrooms">Natural Mushrooms</option>
                   <option value="Cosmetic Ingredients">Cosmetic Ingredients</option>
                   <option value="Fruit &amp; Vegetable Powders">Fruit &amp; Vegetable Powders</option>
                 </select>
@@ -124,6 +165,17 @@
                   <option value="Functional Beverages">Functional Beverages</option>
                   <option value="Food Formulations">Food Formulations</option>
                   <option value="Functional Powders">Functional Powders</option>
+                  <option value="Gummies">Gummies</option>
+                  <option value="Immune Support">Immune Support</option>
+                  <option value="Healthy Aging">Healthy Aging</option>
+                  <option value="Men's Health">Men's Health</option>
+                  <option value="Mood Support">Mood Support</option>
+                  <option value="Respiratory Support">Respiratory Support</option>
+                  <option value="Botanical Blends">Botanical Blends</option>
+                  <option value="Women's Health">Women's Health</option>
+                  <option value="Digestive Support">Digestive Support</option>
+                  <option value="Detox Support">Detox Support</option>
+                  <option value="Botanical Teas">Botanical Teas</option>
                   <option value="Cosmetics &amp; Personal Care">Cosmetics &amp; Personal Care</option>
                 </select>
               </label>
@@ -140,7 +192,7 @@
                 </select>
               </label>
               <div class="filter-bar__count" data-filter-count>
-                10 products shown
+                49 products shown
               </div>
             </div>
             <div class="card-grid card-grid--3" data-products-grid>
@@ -373,11 +425,379 @@
                   </div>
                 </div>
               </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Functional Beverages|Gummies">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of rose fruit extract powder and raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-roxburgh-rose.html">Roxburgh Rose Extract</a></h3>
+                    <p>A differentiated fruit-origin specialty ingredient for U.S. brands looking at antioxidant positioning, SOD support, and vitamin C language.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Functional Beverages</span>
+                    <span class="tag">Gummies</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-roxburgh-rose.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Roxburgh%20Rose%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Respiratory Support|Cosmetics &amp; Personal Care">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of ivy extract powder and botanical material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-ivy-extract.html">Ivy Extract</a></h3>
+                    <p>Ivy extract positioned for respiratory-support and botanical syrup concepts where hederin or hederacoside C specification matters.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Respiratory Support</span>
+                    <span class="tag">Cosmetics &amp; Personal Care</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-ivy-extract.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Ivy%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Healthy Aging|Functional Powders">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-black-ginger-extract-1200.webp" alt="Representative photo-style visual of fisetin extract powder and botanical material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-fisetin.html">Fisetin (Cotinus coggygria Extract)</a></h3>
+                    <p>High-purity fisetin ingredient for U.S. brands evaluating premium healthy-aging, cognition, and specialty nutraceutical formulations.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Healthy Aging</span>
+                    <span class="tag">Functional Powders</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-fisetin.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Fisetin%20(Cotinus%20coggygria%20Extract)&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Immune Support|Functional Beverages">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of echinacea extract powder and botanical raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-echinacea.html">Echinacea Extract</a></h3>
+                    <p>Echinacea extract for immune-support and seasonal wellness products where polyphenol specification and documentation are part of the screen.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Immune Support</span>
+                    <span class="tag">Functional Beverages</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-echinacea.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Echinacea%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Men's Health|Botanical Blends">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of dioscorea nipponica extract powder and botanical raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-dioscorea-nipponica.html">Dioscorea Nipponica Extract</a></h3>
+                    <p>A specialty botanical option for teams evaluating protodioscin-led positioning in men's health and structured botanical blends.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Men's Health</span>
+                    <span class="tag">Botanical Blends</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-dioscorea-nipponica.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Dioscorea%20Nipponica%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Functional Beverages|Botanical Blends">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-black-ginger-extract-1200.webp" alt="Representative photo-style visual of ginger root extract powder and rhizome material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-ginger-root.html">Ginger Root Extract</a></h3>
+                    <p>Ginger root extract with both standard and water-soluble formats for supplement, beverage, and botanical blend programs.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Functional Beverages</span>
+                    <span class="tag">Botanical Blends</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-ginger-root.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Ginger%20Root%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Cosmetics &amp; Personal Care|Botanical Blends">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of aloe extract powder and botanical raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-aloe-extract.html">Aloe Extract</a></h3>
+                    <p>Aloe extract for digestive, beauty-from-within, and personal-care buyers who need clear aloin A+B specification language.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Cosmetics &amp; Personal Care</span>
+                    <span class="tag">Botanical Blends</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-aloe-extract.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Aloe%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Mood Support|Botanical Blends">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of St. John's Wort extract powder and botanical raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-st-johns-wort.html">St. John's Wort Extract</a></h3>
+                    <p>St. John's Wort extract for supplement teams that need a conventional hypericin marker and a professional B2B documentation path.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Mood Support</span>
+                    <span class="tag">Botanical Blends</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-st-johns-wort.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=St.%20John%27s%20Wort%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Healthy Aging|Men's Health">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-black-garlic-extract-1200.webp" alt="Representative photo-style visual of shilajit extract powder and sample material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-shilajit.html">Shilajit Extract</a></h3>
+                    <p>Shilajit extract for premium U.S. supplement programs comparing fulvic acid levels, positioning, and commercial responsiveness.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Healthy Aging</span>
+                    <span class="tag">Men's Health</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-shilajit.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Shilajit%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Botanical Blends|Functional Powders">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of white willow bark extract powder and bark raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-white-willow-bark.html">White Willow Bark Extract</a></h3>
+                    <p>White willow bark extract for U.S. supplement teams reviewing salicin grades and conventional botanical positioning.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Botanical Blends</span>
+                    <span class="tag">Functional Powders</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-white-willow-bark.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=White%20Willow%20Bark%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Functional Beverages|Botanical Blends">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of cinnamon extract powder and bark material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-cinnamon-extract.html">Cinnamon Extract</a></h3>
+                    <p>Cinnamon extract for U.S. buyers looking at OPC-led positioning in supplement, beverage, and metabolic-support concepts.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Functional Beverages</span>
+                    <span class="tag">Botanical Blends</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-cinnamon-extract.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Cinnamon%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Functional Beverages|Botanical Blends">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of kelp extract powder and marine botanical material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-kelp-extract.html">Kelp Extract</a></h3>
+                    <p>Kelp extract for iodine-led supplement concepts where U.S. buyers need a simple active-marker and documentation screen.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Functional Beverages</span>
+                    <span class="tag">Botanical Blends</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-kelp-extract.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Kelp%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Healthy Aging|Functional Powders">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-black-ginger-extract-1200.webp" alt="Representative photo-style visual of soybean extract powder and plant-origin raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-soybean-extract.html">Soybean Extract</a></h3>
+                    <p>Soybean extract for isoflavone-position supplement programs that need a clearer U.S. market sourcing and document path.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Healthy Aging</span>
+                    <span class="tag">Functional Powders</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-soybean-extract.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Soybean%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Cosmetics &amp; Personal Care|Botanical Blends">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of horsetail extract powder and botanical raw material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-horsetail-extract.html">Horsetail Extract</a></h3>
+                    <p>Horsetail extract for silica-led beauty, bone, and botanical blend programs where the U.S. buyer needs a clean active story.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Cosmetics &amp; Personal Care</span>
+                    <span class="tag">Botanical Blends</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-horsetail-extract.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Horsetail%20Extract&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card surface" data-product-card data-category="Specialty Ingredients" data-stock="Available by Inquiry" data-applications="Dietary Supplements|Functional Beverages|Food Formulations">
+                <div class="product-card__media">
+                  <img src="assets/img/optimized/brand-purapple-1200.webp" alt="Representative photo-style visual of apple cider vinegar powder and sample material" width="1200" height="900" loading="lazy">
+                </div>
+                <div class="product-card__body">
+                  <div class="product-card__meta">
+                    <span class="tag">Specialty Ingredients</span>
+                    <span class="status-pill status-pill--inquiry">Available by Inquiry</span>
+                  </div>
+                  <div>
+                    <h3><a href="product-apple-cider-vinegar-powder.html">Apple Cider Vinegar Powder</a></h3>
+                    <p>Apple cider vinegar powder for U.S. supplement and beverage programs that need an acetic-acid marker customers already recognize.</p>
+                  </div>
+                  <div class="tag-list">
+                    <span class="tag">Dietary Supplements</span>
+                    <span class="tag">Functional Beverages</span>
+                    <span class="tag">Food Formulations</span>
+                  </div>
+                  <div class="cluster">
+                    <a class="button button--secondary" href="product-apple-cider-vinegar-powder.html">View details</a>
+                    <a class="button button--primary" href="contact.html?product=Apple%20Cider%20Vinegar%20Powder&inquiry_type=quote#inquiry-form">Request Quote</a>
+                  </div>
+                </div>
+              </article>
             </div>
             <div class="empty-state" data-products-empty hidden>
               <h2>No matching products</h2>
               <p>Try a broader filter or contact us for an inquiry-based match.</p>
             </div>
+            <section class="info-card">
+              <h2>What buyers usually compare on this page</h2>
+              <ul class="warehouse-checklist warehouse-checklist--dense">
+                <li>Category fit: whether the ingredient belongs to a broad commodity track or a more differentiated collection.</li>
+                <li>Specification logic: how active markers, ratio formats, or polysaccharide levels align with the target program.</li>
+                <li>Commercial path: stock status, documentation availability, and whether the project should move to quote, sample, or COA review first.</li>
+              </ul>
+            </section>
           </div>
         </section>
       </main>

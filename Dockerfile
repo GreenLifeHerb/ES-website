@@ -28,8 +28,11 @@ COPY sitemap.xml ./
 COPY terms.html ./
 COPY warehouse.html ./
 COPY package.json ./
+COPY package-lock.json ./
 COPY server.js ./
 COPY assets ./assets
+
+RUN npm ci --omit=dev
 
 EXPOSE 8080
 

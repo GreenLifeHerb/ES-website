@@ -334,19 +334,19 @@ async function main() {
       );
     }
 
-    const existingSettings = await app.db.query("api::site-settings.site-settings").findOne({
+    const existingSettings = await app.db.query("api::site-setting.site-setting").findOne({
       where: {},
     });
 
     if (existingSettings) {
-      await app.db.query("api::site-settings.site-settings").update({
+      await app.db.query("api::site-setting.site-setting").update({
         where: {
           id: existingSettings.id,
         },
         data: siteSettingsData,
       });
     } else {
-      await app.db.query("api::site-settings.site-settings").create({
+      await app.db.query("api::site-setting.site-setting").create({
         data: siteSettingsData,
       });
     }

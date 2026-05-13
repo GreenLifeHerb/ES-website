@@ -141,7 +141,7 @@ Implemented content types:
 8. `InventorySnapshot`
 9. `Resource`
 10. `FAQ`
-11. `SiteSettings`
+11. `SiteSetting`
 
 ### Notes
 
@@ -264,7 +264,7 @@ File: `src/utils/email-service.js`
 ```js
 await transporter.sendMail({
   from: process.env.MAIL_FROM || "no-reply@essencesourceusa.com",
-  to: process.env.MAIL_TO || "hello@essencesourceusa.com",
+  to: process.env.MAIL_TO || "info@essencesourceusa.com",
   replyTo: inquiry.email,
   subject: `[Essence Source] ${inquiry.inquiry_type} inquiry from ${inquiry.company}`,
 });
@@ -349,3 +349,22 @@ SMTP_USER=sales@your-domain.com
 SMTP_PASS=your-app-password
 FRONTEND_ORIGINS=https://essencesourceusa.com
 ```
+
+## Recommended production domain layout
+
+For the current Essence Source setup, the cleanest production layout is:
+
+- public website: `https://essencesourceusa.com`
+- Strapi CMS/API: `https://cms.essencesourceusa.com`
+
+In that setup:
+
+- `PUBLIC_BASE_URL=https://cms.essencesourceusa.com`
+- `FRONTEND_ORIGINS=https://essencesourceusa.com,https://www.essencesourceusa.com`
+- the frontend service forwards form submissions to:
+
+```text
+https://cms.essencesourceusa.com/api/public/inquiries
+```
+
+This keeps the CMS admin and API separated from the public marketing domain while still allowing the website to submit inquiries cleanly.

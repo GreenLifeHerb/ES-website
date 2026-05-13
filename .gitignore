@@ -22,6 +22,12 @@
 
 # production
 /build
+/backend/build
+/backend/node_modules
+/backend/.npm-cache
+/backend/.strapi
+/backend/.xdg
+/backend/.strapi-updater.json*
 
 # generated/retired visual assets
 /assets/img/*.svg

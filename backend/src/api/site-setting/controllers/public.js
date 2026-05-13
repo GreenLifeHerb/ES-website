@@ -4,7 +4,7 @@ const { sanitizeSiteSettings } = require("../../../utils/normalizers");
 
 module.exports = {
   async find(ctx) {
-    const item = await strapi.db.query("api::site-settings.site-settings").findOne({
+    const item = await strapi.db.query("api::site-setting.site-setting").findOne({
       where: {},
     });
 

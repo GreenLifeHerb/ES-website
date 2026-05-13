@@ -124,6 +124,11 @@ summary:focus-visible {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.home-brand-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+}
+
 .info-card,
 .product-card,
 .faq-card,
@@ -192,6 +197,27 @@ summary:focus-visible {
 
 .product-card--brand .product-card__media {
   aspect-ratio: 1.18 / 1;
+}
+
+.home-brand-grid .product-card h3 {
+  font-size: 1.16rem;
+}
+
+.home-brand-grid .product-card__body {
+  padding: 1rem;
+}
+
+.home-brand-grid .product-card__application-list {
+  font-size: 0.88rem;
+}
+
+.home-brand-grid .button {
+  width: 100%;
+}
+
+.home-brand-grid .product-card__actions {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .brand-kicker {
@@ -471,11 +497,16 @@ summary:focus-visible {
   .filter-bar {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .home-brand-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 48rem) {
   .card-grid--3,
   .card-grid--4,
+  .home-brand-grid,
   .hero__layout,
   .form-grid,
   .filter-bar {

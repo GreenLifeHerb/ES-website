@@ -4,6 +4,29 @@
     const grid = document.querySelector("[data-products-grid]");
     if (!root || !grid) return;
 
+    if (window.EssenceSource && window.EssenceSourceCards) {
+      const existingCategories = new Set(
+        Array.from(grid.querySelectorAll("[data-product-card]")).map(
+          (card) => card.dataset.category,
+        ),
+      );
+
+      if (!existingCategories.has("Specification Extracts")) {
+        const products = await window.EssenceSource.fetchJson(
+          "assets/data/products.json",
+        );
+        const specificationProducts = products.filter(
+          (product) => product.category === "Specification Extracts",
+        );
+        grid.insertAdjacentHTML(
+          "beforeend",
+          specificationProducts
+            .map((product) => window.EssenceSourceCards.createProductCard(product))
+            .join(""),
+        );
+      }
+    }
+
     const categorySelect = document.querySelector("#filter-category");
     const applicationSelect = document.querySelector("#filter-application");
     const stockSelect = document.querySelector("#filter-stock");
