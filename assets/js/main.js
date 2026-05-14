@@ -31,11 +31,11 @@
       {
         rel: "icon",
         type: "image/png",
-        href: "assets/img/essence-source-logo.png",
+        href: "favicon.png",
       },
       {
         rel: "apple-touch-icon",
-        href: "assets/img/essence-source-logo.png",
+        href: "favicon.png",
       },
     ];
 
