@@ -3,6 +3,12 @@
     cache: new Map(),
   };
 
+  const SALES_EMAIL = "info@essencesourceusa.com";
+
+  function buildMailto(subject) {
+    return `mailto:${SALES_EMAIL}?subject=${encodeURIComponent(subject)}`;
+  }
+
   window.EssenceSource = {
     async fetchJson(url) {
       if (state.cache.has(url)) {
@@ -99,8 +105,8 @@
             ${navLinks}
           </nav>
           <div class="site-actions">
-            <a class="site-nav__link site-nav__link--desktop-wide" href="contact.html?inquiry_type=docs#inquiry-form">Ask for COA</a>
-            <a class="button button--primary" href="contact.html?inquiry_type=quote#inquiry-form">Request Quote</a>
+            <a class="site-nav__link site-nav__link--desktop-wide" href="${buildMailto("Essence Source document request")}">Email for Documents</a>
+            <a class="button button--primary" href="contact.html#contact-options">Contact Sales</a>
             <button class="button button--secondary menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu" data-nav-toggle>
               Menu
             </button>
@@ -134,8 +140,8 @@
         <nav class="mobile-nav">
           <a href="products.html">Products Overview</a>
           ${mobileLinks}
-          <a href="contact.html?inquiry_type=docs#inquiry-form">Ask for COA</a>
-          <a href="contact.html?inquiry_type=quote#inquiry-form">Request Quote</a>
+          <a href="${buildMailto("Essence Source document request")}">Email for Documents</a>
+          <a href="contact.html#contact-options">Contact Sales</a>
         </nav>
       </aside>
     `;

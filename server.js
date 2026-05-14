@@ -23,6 +23,18 @@ const frontendOrigins = String(process.env.FRONTEND_ORIGINS || "")
   .map((item) => item.trim())
   .filter(Boolean);
 const rateLimitStore = new Map();
+const blockedPathPrefixes = [
+  ".git",
+  ".github",
+  ".lighthouseci",
+  ".next",
+  ".playwright-results",
+  "backend",
+  "infra",
+  "node_modules",
+  "test-results",
+  "tests",
+];
 
 function logInquiryMode() {
   if (inquiryProxyUrl) {
@@ -65,6 +77,18 @@ function resolvePath(urlPath) {
   const requestedPath = cleanedPath === "/" ? "/index.html" : cleanedPath;
   const normalized = path.normalize(requestedPath).replace(/^(\.\.[/\\])+/, "");
   return path.join(rootDir, normalized);
+}
+
+function isBlockedStaticPath(filePath) {
+  const relativePath = path.relative(rootDir, filePath);
+  if (!relativePath || relativePath.startsWith("..")) {
+    return true;
+  }
+
+  const segments = relativePath.split(path.sep);
+  return segments.some(
+    (segment) => segment.startsWith(".") || blockedPathPrefixes.includes(segment),
+  );
 }
 
 function sendFile(request, response, filePath, statusCode = 200) {
@@ -283,6 +307,12 @@ function buildInquiryEmail(payload, ticketId) {
 }
 
 async function proxyInquiry(request, response) {
+  buildJsonResponse(response, 410, {
+    success: false,
+    message: "Online inquiry submission is temporarily disabled. Please contact info@essencesourceusa.com by email.",
+  });
+  return;
+
   if (!isAllowedOrigin(request)) {
     buildJsonResponse(response, 403, {
       success: false,
@@ -418,6 +448,11 @@ const server = http.createServer((request, response) => {
   }
 
   const filePath = resolvePath(request.url || "/");
+
+  if (isBlockedStaticPath(filePath)) {
+    sendFile(request, response, path.join(rootDir, "404.html"), 404);
+    return;
+  }
 
   fs.stat(filePath, (error, stats) => {
     if (!error && stats.isFile()) {

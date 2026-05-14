@@ -1,4 +1,18 @@
 (function () {
+  const salesEmail = "info@essencesourceusa.com";
+
+  function buildMailto(subject) {
+    return `mailto:${salesEmail}?subject=${encodeURIComponent(subject)}`;
+  }
+
+  function buildProductMailto(productName, intent = "sales") {
+    const subjectMap = {
+      sales: `Essence Source inquiry - ${productName}`,
+      docs: `Essence Source document request - ${productName}`,
+    };
+    return buildMailto(subjectMap[intent] || subjectMap.sales);
+  }
+
   function statusClass(status) {
     if (status === "US Warehouse Available")
       return "status-pill status-pill--warehouse";
@@ -26,7 +40,7 @@
           </div>
           <div class="cluster">
             <a class="button button--secondary" href="${resolveProductHref(product.slug)}">View details</a>
-            <a class="button button--primary" href="contact.html?product=${encodeURIComponent(product.name)}#inquiry-form">${product.cta}</a>
+            <a class="button button--primary" href="${buildProductMailto(product.name)}">Email sales</a>
           </div>
         </div>
       </article>
@@ -116,7 +130,7 @@
               </div>
               <div class="cluster product-card__actions">
                 <a class="button button--secondary" href="${item.href}">${item.cta}</a>
-                <a class="button button--primary" href="contact.html?product=${encodeURIComponent(item.ingredient)}#inquiry-form">Request Quote</a>
+                <a class="button button--primary" href="${buildProductMailto(item.ingredient)}">Email sales</a>
               </div>
             </div>
           </article>
@@ -147,7 +161,7 @@
             </div>
             <div class="cluster" style="margin-top: 1rem;">
               <a class="button button--secondary" href="${resolveProductHref(product.slug)}">View ingredient</a>
-              <a class="button button--primary" href="contact.html?product=${encodeURIComponent(product.name)}#inquiry-form">${product.cta}</a>
+              <a class="button button--primary" href="${buildProductMailto(product.name)}">Email sales</a>
             </div>
           </article>
         `,
@@ -215,11 +229,11 @@
 
     inquiryNode.innerHTML = `
       <div class="sidebar-card">
-        <h2>Inquiry sidebar</h2>
-        <p style="margin-top: 0.75rem;">Request a quote, sample, or document review for ${product.name}.</p>
+        <h2>Contact sales</h2>
+        <p style="margin-top: 0.75rem;">Email our team for pricing, samples, specification review, or document support for ${product.name}.</p>
         <div class="cluster" style="margin-top: 1rem;">
-          <a class="button button--primary" href="contact.html?product=${encodeURIComponent(product.name)}#inquiry-form">${product.cta}</a>
-          <a class="button button--secondary" href="quality.html#document-request">Ask for COA</a>
+          <a class="button button--primary" href="${buildProductMailto(product.name)}">Email sales</a>
+          <a class="button button--secondary" href="${buildProductMailto(product.name, "docs")}">Email for documents</a>
         </div>
       </div>
       <section class="sidebar-card notes-terms-card">

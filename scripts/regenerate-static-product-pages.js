@@ -16,6 +16,8 @@ const notesTerms = [
   "For pricing, availability, and sample requests, please reach out via our official contact channels.",
 ];
 
+const salesEmail = "info@essencesourceusa.com";
+
 const productFileMap = {
   "green-coffee-bean-extract": "product-green-coffee.html",
   "black-ginger-extract": "product-black-ginger.html",
@@ -68,52 +70,7 @@ const productFileMap = {
   "turkey-tail-mushroom-extract": "product-turkey-tail-mushroom-extract.html",
 };
 
-const slugsToRegenerate = [
-  "aloe-extract",
-  "alfalfa-extract",
-  "apple-cider-vinegar-powder",
-  "ashwagandha-root-extract",
-  "astragalus-extract",
-  "beet-root-powder",
-  "burdock-extract",
-  "celery-seed-extract",
-  "chaga-extract",
-  "cinnamon-extract-4-1",
-  "cinnamon-extract",
-  "dandelion-leaf-extract",
-  "dandelion-root-extract",
-  "dioscorea-nipponica-extract",
-  "echinacea-extract",
-  "elderberry-extract",
-  "eyebright-extract",
-  "fisetin-cotinus-coggygria-extract",
-  "ginger-root-extract",
-  "grape-seed-extract",
-  "hibiscus-flower-extract",
-  "horsetail-extract",
-  "ivy-extract",
-  "kelp-extract-4-1",
-  "kelp-extract",
-  "lemon-balm-extract",
-  "lions-mane-extract",
-  "maca-extract",
-  "marshmallow-extract",
-  "nettle-extract",
-  "reishi-mushroom-extract",
-  "rosemary-extract",
-  "rosehip-extract",
-  "roxburgh-rose-extract",
-  "saw-palmetto-extract",
-  "shiitake-mushroom-extract",
-  "shilajit-extract",
-  "soybean-extract",
-  "st-johns-wort-extract",
-  "thyme-extract",
-  "turkey-tail-mushroom-extract",
-  "valerian-extract",
-  "white-willow-bark-extract",
-  "wolfberry-extract",
-];
+const slugsToRegenerate = Object.keys(productFileMap);
 
 function escapeHtml(value) {
   return String(value)
@@ -122,6 +79,18 @@ function escapeHtml(value) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+function buildMailto(subject) {
+  return `mailto:${salesEmail}?subject=${encodeURIComponent(subject)}`;
+}
+
+function buildProductMailto(productName, intent = "sales") {
+  const subjectMap = {
+    sales: `Essence Source inquiry - ${productName}`,
+    docs: `Essence Source document request - ${productName}`,
+  };
+  return buildMailto(subjectMap[intent] || subjectMap.sales);
 }
 
 function eyebrowForCategory(category) {
@@ -320,11 +289,11 @@ function buildProductPage(product) {
             </div>
             <aside class="stack">
               <div class="sidebar-card">
-                <h2>Inquiry sidebar</h2>
-                <p style="margin-top: 0.75rem;">Request a quote, sample, or document review for ${escapeHtml(product.name)}.</p>
+                <h2>Contact sales</h2>
+                <p style="margin-top: 0.75rem;">Email our team for pricing, samples, specification review, or document support for ${escapeHtml(product.name)}.</p>
                 <div class="cluster" style="margin-top: 1rem;">
-                  <a class="button button--primary" href="contact.html?product=${encodeURIComponent(product.name)}#inquiry-form">${escapeHtml(product.cta)}</a>
-                  <a class="button button--secondary" href="contact.html?product=${encodeURIComponent(product.name)}&inquiry_type=docs#inquiry-form">Ask for COA</a>
+                  <a class="button button--primary" href="${buildProductMailto(product.name)}">Email sales</a>
+                  <a class="button button--secondary" href="${buildProductMailto(product.name, "docs")}">Email for documents</a>
                 </div>
               </div>
               <section class="sidebar-card notes-terms-card">

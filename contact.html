@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Essence Source Botanical Ingredients</title>
+    <title>Contact Essence Source</title>
     <meta
       name="description"
-      content="Contact and inquiry page for U.S. B2B buyers requesting botanical ingredient quotes, samples, or COA support."
+      content="Contact Essence Source for botanical ingredient sales, documents, and business inquiries."
     />
     <meta
       property="og:title"
-      content="Contact Essence Source Botanical Ingredients"
+      content="Contact Essence Source"
     />
     <meta
       property="og:description"
-      content="Contact and inquiry page for Essence Source."
+      content="Contact options for Essence Source."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -28,12 +28,13 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Contact Essence Source Botanical Ingredients"
+      content="Contact Essence Source"
     />
     <meta
       name="twitter:description"
-      content="Contact Essence Source for B2B ingredient quote, sample, and COA requests."
+      content="Contact Essence Source for sales, sample, and document support."
     />
+    <meta name="robots" content="noindex, nofollow" />
     <meta
       name="twitter:image"
       content="https://essencesourceusa.com/assets/img/optimized/photo-quality-lab-1200.webp"
@@ -43,9 +44,9 @@
       {
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        "name": "Contact Essence Source Botanical Ingredients",
+        "name": "Contact Essence Source",
         "url": "https://essencesourceusa.com/contact.html",
-        "description": "Contact page for quote requests, sample requests, and document requests related to Essence Source botanical ingredients.",
+        "description": "Contact page for sales, sample, and document requests related to Essence Source botanical ingredients.",
         "mainEntity": {
           "@type": "Organization",
           "name": "Essence Source",
@@ -94,12 +95,11 @@
         <section class="page-hero">
           <div class="container page-grid">
             <div class="section-heading">
-              <div class="section-heading__eyebrow">Contact &amp; inquiry</div>
-              <h1>Request a Quote, Request a Sample, or Ask for COA</h1>
+              <div class="section-heading__eyebrow">Contact</div>
+              <h1>Contact Essence Source</h1>
               <p>
-                Use this form to start a quote, sample, or document request.
-                When the live inquiry API is configured, submissions can be
-                recorded in the backend and forwarded to the sales inbox.
+                Use the official company email below for sales questions,
+                sample requests, specification review, or document support.
               </p>
             </div>
             <aside class="sidebar-card">
@@ -127,147 +127,41 @@
         </section>
         <section class="section">
           <div class="container">
-            <form
-              class="surface"
-              id="inquiry-form"
-              data-form="inquiry"
-              novalidate
-              style="padding: 1.5rem"
-            >
-              <div class="form-grid">
-                <div class="field">
-                  <label for="name">Name</label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    data-error-required="Please enter your name."
-                  />
-                  <div class="field__error" data-error-for="name"></div>
-                </div>
-                <div class="field">
-                  <label for="company">Company</label>
-                  <input
-                    id="company"
-                    name="company"
-                    type="text"
-                    required
-                    data-error-required="Please enter your company name."
-                  />
-                  <div class="field__error" data-error-for="company"></div>
-                </div>
-                <div class="field">
-                  <label for="email">Business email</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    data-error-required="Please enter a valid business email."
-                    data-error-email="Please enter a valid business email."
-                  />
-                  <div class="field__error" data-error-for="email"></div>
-                </div>
-                <div class="field">
-                  <label for="inquiry-type">Request type</label>
-                  <select
-                    id="inquiry-type"
-                    name="inquiry_type"
-                    data-prefill-query="inquiry_type"
-                    required
-                    data-error-required="Please choose a request type."
-                  >
-                    <option value="">Select one</option>
-                    <option value="quote">Request Quote</option>
-                    <option value="sample">Request Sample</option>
-                    <option value="docs">Ask for COA / TDS / SDS</option>
-                    <option value="contact">General Contact</option>
-                  </select>
-                  <div class="field__error" data-error-for="inquiry_type"></div>
-                </div>
-                <div class="field">
-                  <label for="application">Application</label>
-                  <input
-                    id="application"
-                    name="application"
-                    type="text"
-                    required
-                    placeholder="Capsules, gummies, functional beverage, powder blend"
-                    data-error-required="Please enter the intended application."
-                  />
-                  <div class="field__error" data-error-for="application"></div>
-                </div>
-                <div class="field field--full">
-                  <label for="product-interest">Product interest</label>
-                  <input
-                    id="product-interest"
-                    name="product_interest"
-                    type="text"
-                    placeholder="Green Coffee Bean Extract"
-                    data-prefill-product
-                    data-prefill-query="product"
-                    required
-                    data-error-required="Please enter the product you want to discuss."
-                  />
-                  <div
-                    class="field__error"
-                    data-error-for="product_interest"
-                  ></div>
-                </div>
-                <div class="field field--full">
-                  <label for="message">Project details</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    data-error-required="Please enter your project details."
-                    placeholder="Tell us the application, target specification, and document needs."
-                  ></textarea>
-                  <div class="field__error" data-error-for="message"></div>
-                </div>
-                <div class="field field--full" style="display: none">
-                  <label for="website">Website</label>
-                  <input
-                    id="website"
-                    name="website"
-                    type="text"
-                    tabindex="-1"
-                    autocomplete="off"
-                  />
-                </div>
-                <div class="field field--full">
-                  <label
-                    for="consent"
-                    style="display: flex; gap: 0.75rem; align-items: flex-start"
-                  >
-                    <input
-                      id="consent"
-                      name="consent"
-                      type="checkbox"
-                      required
-                      data-error-required="Please confirm that we may respond to this inquiry."
-                      style="margin-top: 0.2rem"
-                    />
-                    <span>
-                      I agree that Essence Source may use this information to
-                      respond to my inquiry and follow up about the requested
-                      products or documents.
-                    </span>
-                  </label>
-                  <div class="field__error" data-error-for="consent"></div>
-                </div>
+            <div class="surface" id="contact-options" style="padding: 1.5rem">
+              <div class="section-heading">
+                <div class="section-heading__eyebrow">Official channels</div>
+                <h2>Email-based contact only</h2>
+                <p>
+                  For the moment, we are routing commercial requests through
+                  direct email instead of an on-site submission form.
+                </p>
               </div>
-              <div
-                class="cluster"
-                style="margin-top: 1rem; align-items: center"
-              >
-                <button class="button button--primary" type="submit">
-                  Submit Inquiry
-                </button>
-                <div class="notice" data-form-status hidden></div>
+              <div class="card-grid card-grid--3" style="margin-top: 2rem">
+                <article class="info-card">
+                  <h3>Sales inquiries</h3>
+                  <p>Pricing, availability, specifications, and lead-time questions.</p>
+                  <a class="button button--primary" href="mailto:info@essencesourceusa.com?subject=Essence%20Source%20sales%20inquiry">Email sales</a>
+                </article>
+                <article class="info-card">
+                  <h3>Sample requests</h3>
+                  <p>Use email to request samples and include the product name in the subject line.</p>
+                  <a class="button button--secondary" href="mailto:info@essencesourceusa.com?subject=Essence%20Source%20sample%20request">Email for samples</a>
+                </article>
+                <article class="info-card">
+                  <h3>Document requests</h3>
+                  <p>Ask for COA, TDS, SDS, or related quality files by email.</p>
+                  <a class="button button--secondary" href="mailto:info@essencesourceusa.com?subject=Essence%20Source%20document%20request">Email for documents</a>
+                </article>
               </div>
-            </form>
+              <div class="info-card" style="margin-top: 2rem">
+                <h3>What to include</h3>
+                <p>
+                  To speed up follow-up, include your company name, product of
+                  interest, intended application, target specification, and any
+                  document needs in your email.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -276,6 +170,5 @@
     <script src="assets/data/site-content.js" defer></script>
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/nav.js" defer></script>
-    <script src="assets/js/forms.js" defer></script>
   </body>
 </html>
