@@ -9,7 +9,9 @@
         "assets/data/products.json",
       );
       grid.innerHTML = products
-        .map((product) => window.EssenceSourceCards.createProductCard(product))
+        .map((product, index) =>
+          window.EssenceSourceCards.createProductCard(product, { index }),
+        )
         .join("");
     }
 

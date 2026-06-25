@@ -27,17 +27,25 @@
     const priority = options.priority ? ' fetchpriority="high"' : "";
     const src480 = image.replace("-1200.", "-480.");
     const src768 = image.replace("-1200.", "-768.");
+    const fallbackSrc = options.fallbackSrc || image;
     const sizes =
       options.sizes ||
       "(max-width: 48rem) calc(100vw - 2rem), (max-width: 70rem) 50vw, 25vw";
-    return `<img src="${image}" srcset="${src480} 480w, ${src768} 768w, ${image} 1200w" sizes="${sizes}" alt="${alt}" width="${width}" height="${height}" loading="${loading}"${priority}>`;
+    return `<img src="${fallbackSrc}" srcset="${src480} 480w, ${src768} 768w, ${image} 1200w" sizes="${sizes}" alt="${alt}" width="${width}" height="${height}" loading="${loading}" decoding="async"${priority}>`;
   }
 
-  function createProductCard(product) {
+  function createProductCard(product, options = {}) {
+    const index = options.index || 0;
+    const thumbnailSrc = product.image.replace("-1200.", "-480.");
+    const eager = index < 12;
     return `
       <article class="product-card surface" data-product-card data-slug="${product.slug}" data-category="${product.category}" data-stock="${product.warehouse_status}" data-applications="${product.applications.join("|")}">
         <div class="product-card__media">
-          ${responsiveImage(product.image, product.alt)}
+          ${responsiveImage(product.image, product.alt, {
+            fallbackSrc: thumbnailSrc,
+            loading: eager ? "eager" : "lazy",
+            priority: index < 3,
+          })}
         </div>
         <div class="product-card__body">
           <div class="product-card__meta">
