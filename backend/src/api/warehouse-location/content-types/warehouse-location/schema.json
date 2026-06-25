@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "warehouse_locations",
+  "info": {
+    "singularName": "warehouse-location",
+    "pluralName": "warehouse-locations",
+    "displayName": "Warehouse Location"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "display_address": {
+      "type": "text"
+    },
+    "coverage_note": {
+      "type": "text"
+    },
+    "is_primary": {
+      "type": "boolean",
+      "default": false
+    },
+    "inventory_snapshots": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::inventory-snapshot.inventory-snapshot",
+      "mappedBy": "warehouse"
+    }
+  }
+}

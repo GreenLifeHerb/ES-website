@@ -1,0 +1,16 @@
+.git
+.github
+.lighthouseci
+.next
+.playwright-results
+backend
+infra
+node_modules
+test-results
+tests
+npm-debug.log
+playwright.config.js
+.env
+.env.*
+assets/img/*.png
+!assets/img/essence-source-logo.png

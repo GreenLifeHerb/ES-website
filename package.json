@@ -1,0 +1,40 @@
+{
+  "name": "essence-source-static-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static B2B botanical ingredients website for Essence Source",
+  "scripts": {
+    "dev": "node server.js",
+    "verify:email": "node scripts/verify-email.js",
+    "lint": "node infra/scripts/validate-structured-data.js",
+    "seo:sitemap": "node infra/scripts/generate-sitemap.js",
+    "seo:sitemap-index": "node infra/scripts/generate-sitemap-index.js",
+    "seo:image-sitemap": "node infra/scripts/generate-image-sitemap.js",
+    "seo:robots": "node infra/scripts/generate-robots.js",
+    "seo:llms": "node infra/scripts/generate-llms.js",
+    "seo:insights": "node infra/scripts/generate-insights-pages.js",
+    "seo:validate": "node infra/scripts/validate-structured-data.js",
+    "audit:pagespeed": "node infra/scripts/audit-pagespeed.js",
+    "audit:seo": "node infra/scripts/audit-seo-baseline.js",
+    "seo:inject": "node infra/scripts/inject-seo-optimizations.js",
+    "seo:indexnow": "node infra/scripts/ping-indexnow.js",
+    "query:gsc": "node infra/scripts/query-gsc.js",
+    "query:gsc:weekly": "node infra/scripts/weekly-gsc-snapshot.js",
+    "query:gsc:inspection": "node infra/scripts/query-gsc-url-inspection.js",
+    "query:ahrefs": "node infra/scripts/query-ahrefs.js",
+    "images:optimize": "node infra/scripts/optimize-images.js",
+    "lighthouse": "lhci autorun --config=infra/lighthouserc.json",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "nodemailer": "^6.10.1"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.55.0",
+    "prettier": "^3.6.2",
+    "sharp": "^0.33.5"
+  }
+}

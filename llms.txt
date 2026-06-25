@@ -1,0 +1,85 @@
+# Essence Source USA
+
+Essence Source is a U.S.-market B2B botanical ingredient sourcing website for supplement, food, beverage, cosmetic, and nutraceutical buyers. The site focuses on product identity, COA/TDS document paths, sample review, RFQ preparation, and U.S. warehouse or replenishment discussion.
+
+Use this file as a concise machine-readable guide to the most important public pages. Do not infer consumer medical claims from the ingredient pages. The site is intended for qualified B2B ingredient sourcing and documentation review.
+
+Last updated: 2026-06-11
+
+## Company and buyer context
+- https://essencesourceusa.com/ - U.S. B2B botanical ingredient supplier homepage
+- https://essencesourceusa.com/about.html - Company overview, operating model, and buyer verification notes
+- https://essencesourceusa.com/quality.html - COA/TDS, testing files, and document request workflow
+- https://essencesourceusa.com/warehouse.html - U.S. warehouse support and stock-path explanation
+- https://essencesourceusa.com/insights.html - Market notes, technical notes, and buyer guide pathways
+- https://essencesourceusa.com/contact.html - Official inquiry and sales contact path
+
+## High-intent sourcing pages
+- https://essencesourceusa.com/botanical-extract-supplier-usa.html - Botanical extract supplier USA landing page
+- https://essencesourceusa.com/botanical-ingredient-supplier.html - Botanical ingredient supplier buyer page
+- https://essencesourceusa.com/nutraceutical-ingredient-supplier.html - Nutraceutical ingredient supplier page
+- https://essencesourceusa.com/bulk-botanical-extracts.html - Bulk botanical extracts sourcing and RFQ page
+- https://essencesourceusa.com/custom-botanical-extract-manufacturing.html - Custom botanical extract manufacturing page
+
+## Buyer guides
+- https://essencesourceusa.com/resources.html - Buyer guides, documentation notes, and sourcing FAQ hub
+- https://essencesourceusa.com/coa-tds-request-checklist.html - COA and TDS request checklist
+- https://essencesourceusa.com/bulk-botanical-extract-rfq-checklist.html - Bulk botanical extract RFQ checklist
+- https://essencesourceusa.com/green-coffee-bean-extract-supplier-guide.html - Green coffee bean extract supplier guide
+- https://essencesourceusa.com/ashwagandha-extract-supplier-guide.html - Ashwagandha extract supplier guide
+- https://essencesourceusa.com/black-ginger-extract-supplier-guide.html - Black ginger extract supplier guide
+- https://essencesourceusa.com/reishi-mushroom-extract-supplier-guide.html - Reishi mushroom extract supplier guide
+- https://essencesourceusa.com/elderberry-extract-supplier-guide.html - Elderberry extract supplier guide
+- https://essencesourceusa.com/lions-mane-extract-supplier-guide.html - Lion's Mane extract supplier guide
+- https://essencesourceusa.com/turkey-tail-mushroom-extract-supplier-guide.html - Turkey tail mushroom extract supplier guide
+- https://essencesourceusa.com/saw-palmetto-extract-supplier-guide.html - Saw palmetto extract supplier guide
+- https://essencesourceusa.com/grape-seed-extract-supplier-guide.html - Grape seed extract supplier guide
+- https://essencesourceusa.com/fisetin-extract-supplier-guide.html - Fisetin extract supplier guide
+- https://essencesourceusa.com/maca-extract-supplier-guide.html - Maca extract supplier guide
+
+## Insights, market notes, and technical notes
+- https://essencesourceusa.com/market-notes.html - Market notes for U.S. botanical ingredient buyers reviewing supply paths, origin variables, seasonal planning, and sourcing risk before RFQ.
+- https://essencesourceusa.com/technical-notes.html - Technical notes for comparing botanical extract specifications, active markers, assay language, solubility, carriers, testing, and application limits.
+- https://essencesourceusa.com/buyer-guides.html - Buyer guides and copy-ready templates for botanical ingredient RFQs, COA/TDS requests, sample review, application fit, and supplier qualification.
+- https://essencesourceusa.com/extract-ratio-vs-standardized-extract.html - A B2B technical note explaining extract ratio vs standardized extract language, assay markers, COA/TDS review, supplier questions, and RFQ risk.
+- https://essencesourceusa.com/green-coffee-chlorogenic-acid-grades.html - A B2B guide to green coffee bean extract chlorogenic acid grades, covering 10%-60% specs, decaffeinated options, solubility, COA/TDS, and RFQ risks.
+- https://essencesourceusa.com/black-ginger-5-7-dimethoxyflavone-grades.html - A B2B guide to black ginger extract grades, covering Kaempferia parviflora identity, 5,7-dimethoxyflavone specs, HPLC, COA/TDS, and RFQ risks.
+- https://essencesourceusa.com/artichoke-cynarin-chlorogenic-acid-specs.html - A B2B guide to artichoke extract specs covering Cynara scolymus identity, cynarin 2.5%-5%, chlorogenic acid options, HPLC, COA/TDS, and RFQ risks.
+- https://essencesourceusa.com/black-garlic-sac-specification-notes.html - A B2B guide to black garlic extract SAC specs covering aged garlic identity, SAC 0.1%-1.0%, sensory fit, COA/TDS review, and RFQ risks.
+- https://essencesourceusa.com/apple-polyphenol-70-specification-notes.html - A B2B guide to apple polyphenol extract specs covering apple-derived identity, 70% polyphenols, procyanidin context, COA/TDS, and RFQ risks.
+- https://essencesourceusa.com/compare-botanical-extract-suppliers-usa.html - A practical B2B guide for comparing U.S. botanical extract suppliers by specification clarity, COA/TDS path, samples, warehouse support, and RFQ fit.
+- https://essencesourceusa.com/coa-vs-tds-botanical-extract-buyers.html - A B2B guide explaining COA vs TDS documents for botanical extract buyers, including what each file should answer, RFQ timing, and QA review risks.
+- https://essencesourceusa.com/coa-tds-request-email-template.html - Copy-ready COA/TDS request email template for botanical extract buyers, covering representative COA, lot COA, TDS, specs, samples, and QA context.
+- https://essencesourceusa.com/bulk-botanical-extract-rfq-template.html - Copy-ready bulk botanical extract RFQ template for U.S. buyers requesting price, MOQ, lead time, packing, COA/TDS, samples, and specification support.
+- https://essencesourceusa.com/botanical-extract-sample-request-template.html - Copy-ready botanical extract sample request template for buyers reviewing specifications, COA/TDS, sample quantity, application fit, and first-order path.
+- https://essencesourceusa.com/green-coffee-bean-extract-buyer-guide.html - A B2B buyer guide for green coffee bean extract covering chlorogenic acid grades, application fit, COA/TDS review, sourcing risk, and RFQ questions.
+- https://essencesourceusa.com/black-garlic-extract-vs-garlic-extract-buyer-notes.html - Buyer notes comparing black garlic extract and garlic extract for B2B sourcing teams reviewing SAC, odor, positioning, application fit, and documentation.
+- https://essencesourceusa.com/elderberry-extract-sourcing-guide.html - A sourcing guide for elderberry extract buyers comparing specification, color, application fit, COA/TDS needs, seasonal planning, and supplier questions.
+- https://essencesourceusa.com/lions-mane-extract-specification-guide.html - Specification guide for Lion's Mane extract buyers comparing mushroom identity, polysaccharide language, beta-glucan questions, documents, and RFQ fit.
+- https://essencesourceusa.com/turkey-tail-beta-glucan-polysaccharide-notes.html - Technical notes for Turkey Tail mushroom extract buyers reviewing beta-glucan, polysaccharide, extract ratio, COA/TDS, and supplier questions.
+- https://essencesourceusa.com/saw-palmetto-extract-buyer-checklist.html - A buyer checklist for saw palmetto extract procurement covering ratio extracts, specification language, application fit, documents, samples, and RFQ questions.
+- https://essencesourceusa.com/grape-seed-extract-opc-specification-guide.html - Specification guide for grape seed extract buyers comparing OPC language, polyphenol positioning, COA/TDS review, application fit, and RFQ questions.
+- https://essencesourceusa.com/maca-extract-supply-application-notes.html - Supply and application notes for maca extract buyers reviewing ratio extracts, capsule and powder formats, documents, sample path, and RFQ readiness.
+
+## Application sourcing pages
+- https://essencesourceusa.com/applications.html - Application hub for supplement, beverage, food, and cosmetic sourcing
+- https://essencesourceusa.com/supplement-botanical-ingredients.html - Supplement botanical ingredient sourcing page
+- https://essencesourceusa.com/functional-beverage-botanical-ingredients.html - Functional beverage botanical ingredient sourcing page
+- https://essencesourceusa.com/cosmetic-botanical-ingredients.html - Cosmetic and personal-care botanical ingredient sourcing page
+
+## Product and category pages
+- https://essencesourceusa.com/products.html - Full botanical ingredient product catalog
+- https://essencesourceusa.com/brand-ingredients.html - Brand ingredient collection
+- https://essencesourceusa.com/specialty-ingredients.html - Specialty ingredient collection
+- https://essencesourceusa.com/specification-extracts.html - Specification extract collection
+- https://essencesourceusa.com/natural-mushrooms.html - Natural mushroom ingredient collection
+- https://essencesourceusa.com/product-green-coffee.html - Green coffee bean extract product page
+- https://essencesourceusa.com/product-black-ginger.html - Black ginger extract product page
+- https://essencesourceusa.com/product-artichoke.html - Artichoke extract product page
+- https://essencesourceusa.com/product-reishi-mushroom-extract.html - Reishi mushroom extract product page
+
+## Machine-readable indexes
+- https://essencesourceusa.com/sitemap-index.xml - Sitemap index for standard and image sitemaps
+- https://essencesourceusa.com/sitemap.xml - Standard XML sitemap
+- https://essencesourceusa.com/image-sitemap.xml - Image XML sitemap
+- https://essencesourceusa.com/sitemap.html - Human-readable HTML sitemap

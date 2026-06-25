@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: essence-source-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: essence_source
+      POSTGRES_USER: essence_source
+      POSTGRES_PASSWORD: essence_source
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: essence-source-redis
+    restart: unless-stopped
+    profiles: ["cache"]
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres-data:

@@ -1,0 +1,120 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": "Botanical extract or ingredient listing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "short_description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "full_description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "botanical_name": {
+      "type": "string"
+    },
+    "part_used": {
+      "type": "string"
+    },
+    "main_component": {
+      "type": "string"
+    },
+    "specification": {
+      "type": "text"
+    },
+    "test_method": {
+      "type": "string"
+    },
+    "applications": {
+      "type": "json",
+      "default": []
+    },
+    "documentation_available": {
+      "type": "json",
+      "default": []
+    },
+    "documentation_links": {
+      "type": "json",
+      "default": []
+    },
+    "warehouse_status": {
+      "type": "enumeration",
+      "enum": [
+        "in_us_stock",
+        "available_by_inquiry",
+        "pilot_lot_available",
+        "made_to_order"
+      ],
+      "default": "available_by_inquiry"
+    },
+    "lead_time": {
+      "type": "string"
+    },
+    "moq": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "json",
+      "default": []
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product-category.product-category",
+      "inversedBy": "products"
+    },
+    "partner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::partner-profile.partner-profile",
+      "inversedBy": "products"
+    },
+    "certifications": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::certification.certification",
+      "mappedBy": "products"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

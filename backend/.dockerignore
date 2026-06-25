@@ -1,0 +1,11 @@
+node_modules
+build
+.strapi
+.npm-cache
+.xdg
+.env
+.env.*
+npm-debug.log*
+coverage
+tests
+sample-data

@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inquiries",
+  "info": {
+    "singularName": "inquiry",
+    "pluralName": "inquiries",
+    "displayName": "Inquiry"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "ticket_id": {
+      "type": "string",
+      "unique": true
+    },
+    "inquiry_type": {
+      "type": "enumeration",
+      "enum": [
+        "contact",
+        "quote",
+        "sample",
+        "docs"
+      ],
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "product_interest": {
+      "type": "string",
+      "required": true
+    },
+    "application": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    },
+    "consent": {
+      "type": "boolean",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "triaged",
+        "responded",
+        "closed",
+        "spam"
+      ],
+      "default": "new"
+    },
+    "source_page": {
+      "type": "string"
+    }
+  }
+}

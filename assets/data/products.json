@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "slug": "green-coffee-bean-extract",
     "name": "Green Coffee Bean Extract",
@@ -432,7 +432,7 @@
     "slug": "roxburgh-rose-extract",
     "name": "Roxburgh Rose Extract",
     "category": "Specialty Ingredients",
-    "image": "assets/img/product-roxburgh-rose-extract.svg",
+    "image": "assets/img/product-roxburgh-rose-extract.png",
     "alt": "Representative photo-style visual of Roxburgh rose extract powder and fruit-origin raw material",
     "summary": "A fruit-origin specialty ingredient for U.S. brands looking at antioxidant positioning, SOD support, and vitamin C language.",
     "botanical_name": "Rosa roxburghii Tratt.",
@@ -466,7 +466,7 @@
     "slug": "ivy-extract",
     "name": "Ivy Extract",
     "category": "Specialty Ingredients",
-    "image": "assets/img/ivy-extract-1200x900.jpg?v=20260623",
+    "image": "assets/img/product-ivy-extract.png",
     "alt": "Representative photo-style visual of ivy extract powder and leaf raw material",
     "summary": "Ivy extract positioned for respiratory-support and botanical syrup concepts where hederin or hederacoside C specification matters.",
     "botanical_name": "Hedera helix L.",
@@ -500,7 +500,7 @@
     "slug": "fisetin-cotinus-coggygria-extract",
     "name": "Fisetin (Cotinus coggygria Extract)",
     "category": "Specialty Ingredients",
-    "image": "assets/img/product-fisetin-cotinus-coggygria-extract.jpg",
+    "image": "assets/img/product-fisetin-cotinus-coggygria-extract.png",
     "alt": "Representative photo-style visual of fisetin extract powder and botanical source material",
     "summary": "High-purity fisetin ingredient for U.S. brands evaluating premium healthy-aging, cognition, and specialty nutraceutical formulations.",
     "botanical_name": "Cotinus coggygria Scop.",

@@ -1,0 +1,467 @@
+.page-hero {
+  padding-block: 3.6rem 2.5rem;
+}
+
+.page-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) 21rem;
+  align-items: start;
+}
+
+.lede {
+  color: var(--color-stone-700);
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+.split-panel {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
+}
+
+.split-panel .info-card h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+.metric-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.metric-card {
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(67, 59, 53, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.metric-card strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-top: 0.35rem;
+}
+
+.resource-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.resource-card {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.resource-guide-grid .product-card,
+.resource-note-grid .info-card,
+.resource-step-grid .info-card {
+  height: 100%;
+}
+
+.resource-guide-grid .product-card__body {
+  gap: 1rem;
+}
+
+.resource-detail-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.resource-document-grid {
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: stretch;
+}
+
+.resource-document-stack {
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.resource-note-grid {
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+  gap: 1rem;
+}
+
+.resource-step-card {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.resource-detail-grid .resource-card,
+.resource-document-stack .info-card,
+.resource-step-card {
+  min-width: 0;
+}
+
+.resource-detail-grid .resource-card {
+  padding: 1.6rem;
+}
+
+.resource-detail-grid .resource-card h2 {
+  font-size: clamp(1.7rem, 2.4vw, 2.45rem);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.resource-detail-grid .resource-card p,
+.resource-detail-grid .resource-card li {
+  font-size: 1rem;
+}
+
+.resource-document-grid .image-frame {
+  min-height: 28rem;
+}
+
+.resource-document-stack .section-heading h2 {
+  max-width: 18ch;
+}
+
+.metric-card .lede {
+  margin-top: 0.65rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.resource-card .warehouse-checklist {
+  margin-top: 0.75rem;
+}
+
+.resource-card small {
+  color: var(--color-accent-700);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.legal-layout {
+  max-width: 52rem;
+}
+
+.legal-layout h2 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  margin-top: 1.8rem;
+}
+
+.legal-layout p,
+.legal-layout li {
+  color: var(--color-stone-700);
+  line-height: 1.8;
+  margin-top: 0.9rem;
+}
+
+.related-links {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.image-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(67, 59, 53, 0.12);
+  box-shadow: var(--shadow-soft);
+  background: #eee8df;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.split-panel--hero {
+  align-items: center;
+}
+
+.image-frame--hero {
+  min-height: 22rem;
+  aspect-ratio: 1.05 / 1;
+}
+
+.warehouse-checklist {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  color: var(--color-stone-700);
+  line-height: 1.7;
+  padding-left: 1.1rem;
+}
+
+.warehouse-checklist li::marker {
+  color: var(--color-accent-700);
+}
+
+.warehouse-checklist--dense {
+  margin-top: 1.25rem;
+}
+
+.home-brand-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.home-brand-grid .product-card {
+  height: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.home-brand-grid .product-card__media {
+  aspect-ratio: 1 / 1;
+}
+
+.home-brand-grid .product-card__body {
+  padding: 0.95rem;
+  display: grid;
+  grid-template-rows: auto minmax(7.7rem, auto) minmax(5.2rem, auto) minmax(2.35rem, auto) auto;
+  gap: 0.8rem;
+}
+
+.home-brand-grid .brand-kicker {
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+}
+
+.home-brand-grid__intro {
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+}
+
+.home-brand-grid .product-card h3 {
+  font-size: 1.02rem;
+  line-height: 1.15;
+}
+
+.home-brand-grid .product-card p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.home-brand-grid .tag-list {
+  gap: 0.35rem;
+  align-content: start;
+}
+
+.home-brand-grid__markers {
+  min-height: 5.2rem;
+}
+
+.home-brand-grid .tag {
+  padding: 0.26rem 0.58rem;
+  font-size: 0.73rem;
+  line-height: 1.35;
+}
+
+.home-brand-grid__applications {
+  color: var(--color-stone-600);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  min-height: 2.35rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.home-brand-grid .product-card__actions {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.1rem;
+}
+
+.home-brand-grid .button {
+  min-height: 2.7rem;
+  padding-inline: 0.8rem;
+  font-size: 0.84rem;
+}
+
+.application-card {
+  min-height: 100%;
+}
+
+.application-card .product-card__media {
+  aspect-ratio: 1.25 / 1;
+}
+
+.application-card .product-card__media img {
+  object-fit: cover;
+}
+
+.application-card--supplement .product-card__media img {
+  object-position: center 42%;
+}
+
+.application-card--beverage .product-card__media img {
+  object-position: center 50%;
+}
+
+.application-card--food .product-card__media img {
+  object-position: center 48%;
+}
+
+.application-card--cosmetic .product-card__media img {
+  object-position: center 44%;
+}
+
+.application-card .product-card__body {
+  gap: 1rem;
+}
+
+.application-card__list {
+  display: grid;
+  gap: 0.4rem;
+  padding-left: 1rem;
+  color: var(--color-stone-700);
+  line-height: 1.55;
+}
+
+.application-card__list li::marker {
+  color: var(--color-accent-700);
+}
+
+.doc-card .tag-list {
+  gap: 0.5rem;
+}
+
+.doc-card .tag {
+  background: rgba(246, 241, 235, 0.86);
+}
+
+.section-heading--compact {
+  max-width: none;
+}
+
+.section-heading--compact h2 {
+  font-size: clamp(1.55rem, 2.2vw, 2.3rem);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.quality-support-card {
+  min-width: 0;
+}
+
+.quality-support-card .lede {
+  font-size: 1rem;
+}
+
+.notes-terms-card {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.notes-terms-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-stone-700);
+  line-height: 1.65;
+}
+
+.notes-terms-list li::marker {
+  color: var(--color-accent-700);
+}
+
+.collection-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.collection-grid--compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.collection-card,
+.collection-link-card {
+  display: grid;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.collection-card small,
+.collection-link-card strong {
+  color: var(--color-accent-700);
+}
+
+.collection-link-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.faq-static-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-static-list h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.15;
+}
+
+.faq-static-list p {
+  margin-top: 0.45rem;
+}
+
+.collection-hero-media {
+  margin-top: 1.5rem;
+  overflow: hidden;
+  border-radius: 1.75rem;
+  box-shadow: 0 1.5rem 3.5rem rgba(18, 43, 33, 0.14);
+}
+
+.collection-hero-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 64rem) {
+  .page-grid,
+  .split-panel,
+  .metric-row {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-detail-grid,
+  .resource-document-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-document-grid .image-frame {
+    min-height: 20rem;
+  }
+
+  .collection-grid,
+  .collection-grid--compact {
+    grid-template-columns: 1fr;
+  }
+
+  .image-frame--hero {
+    aspect-ratio: 1.45 / 1;
+  }
+
+  .home-brand-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 48rem) {
+  .home-brand-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-frame--hero {
+    aspect-ratio: 1.25 / 1;
+    min-height: 0;
+  }
+}

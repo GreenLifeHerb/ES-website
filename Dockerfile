@@ -1,9 +1,22 @@
-FROM nginx:1.27-alpine
+FROM node:20-alpine
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /app
 
-COPY ES-website/ ./
+ENV NODE_ENV=production
+ENV PORT=8080
+
+COPY *.html ./
+COPY *.xml ./
+COPY *.txt ./
+COPY favicon.ico ./
+COPY favicon.png ./
+COPY package.json ./
+COPY package-lock.json ./
+COPY server.js ./
+COPY assets ./assets
+
+RUN npm ci --omit=dev
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "sed -i 's/listen       80;/listen       8080;/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
+CMD ["node", "server.js"]
