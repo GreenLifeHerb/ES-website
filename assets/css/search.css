@@ -285,13 +285,30 @@
   color: var(--color-stone-700);
 }
 
-@media (max-width: 78rem) {
-  .site-search-trigger {
-    padding-inline: 0.8rem;
+@media (max-width: 70rem) {
+  .site-header__inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    justify-content: normal;
   }
-}
 
-@media (max-width: 48rem) {
+  .site-brand {
+    min-inline-size: 0;
+  }
+
+  .site-brand__copy {
+    min-inline-size: 0;
+  }
+
+  .site-brand__copy strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .site-actions > .button--primary {
+    display: none !important;
+  }
+
   .site-search-trigger {
     min-height: 2.65rem;
     inline-size: 2.75rem;
@@ -306,7 +323,9 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
   }
+}
 
+@media (max-width: 48rem) {
   .site-search {
     align-items: stretch;
     padding: 0.65rem;

@@ -74,7 +74,7 @@
   }
 
   function ensureSearchStyles() {
-    const href = "assets/css/search.css?v=20260626-search";
+    const href = "assets/css/search.css?v=20260626-mobile-header";
     if (document.head.querySelector(`link[href="${href}"]`)) return;
 
     const link = document.createElement("link");
