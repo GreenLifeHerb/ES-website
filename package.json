@@ -13,6 +13,7 @@
     "seo:robots": "node infra/scripts/generate-robots.js",
     "seo:llms": "node infra/scripts/generate-llms.js",
     "seo:insights": "node infra/scripts/generate-insights-pages.js",
+    "seo:search": "node infra/scripts/generate-search-index.js",
     "seo:validate": "node infra/scripts/validate-structured-data.js",
     "audit:pagespeed": "node infra/scripts/audit-pagespeed.js",
     "audit:seo": "node infra/scripts/audit-seo-baseline.js",
