@@ -66,54 +66,54 @@ updateFile("products.html", (content) =>
     )
     .replace(
       'src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of rose fruit extract powder and raw material"',
-      'src="assets/img/product-roxburgh-rose-extract.png" alt="Representative photo-style visual of rose fruit extract powder and raw material"',
+      'src="assets/img/optimized/product-roxburgh-rose-extract-1200.webp" alt="Representative photo-style visual of rose fruit extract powder and raw material"',
     )
     .replace(
       'src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of ivy extract powder and botanical material"',
-      'src="assets/img/product-ivy-extract.png" alt="Representative photo-style visual of ivy extract powder and botanical material"',
+      'src="assets/img/optimized/product-ivy-extract-1200.webp" alt="Representative photo-style visual of ivy extract powder and botanical material"',
     )
     .replace(
       'src="assets/img/optimized/photo-black-ginger-extract-1200.webp" alt="Representative photo-style visual of fisetin extract powder and botanical material"',
-      'src="assets/img/product-fisetin-cotinus-coggygria-extract.png" alt="Representative photo-style visual of fisetin extract powder and botanical material"',
+      'src="assets/img/optimized/product-fisetin-cotinus-coggygria-extract-1200.webp" alt="Representative photo-style visual of fisetin extract powder and botanical material"',
     )
     .replace(
       'src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of echinacea extract powder and botanical raw material"',
-      'src="assets/img/product-echinacea-extract.png" alt="Representative photo-style visual of echinacea extract powder and botanical raw material"',
+      'src="assets/img/optimized/product-echinacea-extract-1200.webp" alt="Representative photo-style visual of echinacea extract powder and botanical raw material"',
     )
     .replace(
       'src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of dioscorea nipponica extract powder and botanical raw material"',
-      'src="assets/img/product-dioscorea-nipponica-extract.png" alt="Representative photo-style visual of dioscorea nipponica extract powder and botanical raw material"',
+      'src="assets/img/optimized/product-dioscorea-nipponica-extract-1200.webp" alt="Representative photo-style visual of dioscorea nipponica extract powder and botanical raw material"',
     )
     .replace(
       'src="assets/img/optimized/photo-black-ginger-extract-1200.webp" alt="Representative photo-style visual of ginger root extract powder and rhizome material"',
-      'src="assets/img/product-ginger-root-extract.png" alt="Representative photo-style visual of ginger root extract powder and rhizome material"',
+      'src="assets/img/optimized/product-ginger-root-extract-1200.webp" alt="Representative photo-style visual of ginger root extract powder and rhizome material"',
     )
     .replace(
       'src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of aloe extract powder and botanical raw material"',
-      'src="assets/img/product-aloe-extract.png" alt="Representative photo-style visual of aloe extract powder and botanical raw material"',
+      'src="assets/img/optimized/product-aloe-extract-1200.webp" alt="Representative photo-style visual of aloe extract powder and botanical raw material"',
     )
     .replace(
       'src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of St. John\'s Wort extract powder and botanical raw material"',
-      'src="assets/img/product-st-johns-wort-extract.png" alt="Representative photo-style visual of St. John\'s Wort extract powder and botanical raw material"',
+      'src="assets/img/optimized/product-st-johns-wort-extract-1200.webp" alt="Representative photo-style visual of St. John\'s Wort extract powder and botanical raw material"',
     )
     .replace(
       'src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of white willow bark extract powder and bark raw material"',
-      'src="assets/img/product-white-willow-bark-extract.png" alt="Representative photo-style visual of white willow bark extract powder and bark raw material"',
+      'src="assets/img/optimized/product-white-willow-bark-extract-1200.webp" alt="Representative photo-style visual of white willow bark extract powder and bark raw material"',
     )
     .replace(
       'src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of cinnamon extract powder and bark material"',
-      'src="assets/img/product-cinnamon-extract.png" alt="Representative photo-style visual of cinnamon extract powder and bark material"',
+      'src="assets/img/optimized/product-cinnamon-extract-1200.webp" alt="Representative photo-style visual of cinnamon extract powder and bark material"',
     )
     .replace(
       'src="assets/img/optimized/photo-green-coffee-extract-1200.webp" alt="Representative photo-style visual of kelp extract powder and marine botanical material"',
-      'src="assets/img/product-kelp-extract.png" alt="Representative photo-style visual of kelp extract powder and marine botanical material"',
+      'src="assets/img/optimized/product-kelp-extract-1200.webp" alt="Representative photo-style visual of kelp extract powder and marine botanical material"',
     )
     .replace(
       'src="assets/img/optimized/photo-black-ginger-extract-1200.webp" alt="Representative photo-style visual of soybean extract powder and plant-origin raw material"',
-      'src="assets/img/product-soybean-extract.png" alt="Representative photo-style visual of soybean extract powder and plant-origin raw material"',
+      'src="assets/img/optimized/product-soybean-extract-1200.webp" alt="Representative photo-style visual of soybean extract powder and plant-origin raw material"',
     )
     .replace(
       'src="assets/img/optimized/photo-artichoke-extract-1200.webp" alt="Representative photo-style visual of horsetail extract powder and botanical raw material"',
-      'src="assets/img/product-horsetail-extract.png" alt="Representative photo-style visual of horsetail extract powder and botanical raw material"',
+      'src="assets/img/optimized/product-horsetail-extract-1200.webp" alt="Representative photo-style visual of horsetail extract powder and botanical raw material"',
     ),
 );

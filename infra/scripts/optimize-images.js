@@ -13,8 +13,12 @@ try {
 }
 
 const projectRoot = path.resolve(__dirname, "../..");
-const inputDir = path.join(projectRoot, "assets", "img");
-const outputDir = path.join(inputDir, "optimized");
+const inputDir = process.env.IMAGE_OPTIMIZE_INPUT_DIR
+  ? path.resolve(process.env.IMAGE_OPTIMIZE_INPUT_DIR)
+  : path.join(projectRoot, "assets", "img");
+const outputDir = process.env.IMAGE_OPTIMIZE_OUTPUT_DIR
+  ? path.resolve(process.env.IMAGE_OPTIMIZE_OUTPUT_DIR)
+  : path.join(inputDir, "optimized");
 const sizes = [480, 768, 1200];
 const supported = new Set([".jpg", ".jpeg", ".png", ".webp", ".svg"]);
 

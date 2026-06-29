@@ -8,9 +8,7 @@ PROJECT_DIR="$(cd "${INFRA_DIR}/.." && pwd)"
 cd "${PROJECT_DIR}"
 
 echo "Generating SEO files"
-node infra/scripts/generate-sitemap.js
-node infra/scripts/generate-robots.js
-node infra/scripts/validate-structured-data.js
+npm run seo:build
 
 echo "Building and starting services"
 cd "${INFRA_DIR}"

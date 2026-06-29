@@ -6,7 +6,7 @@ const path = require("node:path");
 
 const projectRoot = path.resolve(__dirname, "../..");
 const baseUrl = "https://essencesourceusa.com";
-const assetVersion = "20260611-insights-quick-answer";
+const assetVersion = "20260626-mobile-header";
 const updatedDate = "2026-06-11";
 const updatedLabel = "June 2026";
 

@@ -41,7 +41,7 @@ test("contact form shows errors for empty required fields", async ({
   page,
 }) => {
   await page.goto("/contact.html", { waitUntil: "domcontentloaded" });
-  await page.locator("button[type='submit']").click();
+  await page.locator("#contact-form button[type='submit']").click();
   await expect(page.locator("[data-error-for='name']")).toContainText(
     "Please enter your name.",
   );

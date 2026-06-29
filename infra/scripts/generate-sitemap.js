@@ -21,7 +21,7 @@ function discoverHtmlRoutes() {
 
 const allHtmlRoutes = discoverHtmlRoutes();
 
-const coreRoutes = [
+const priorityRoutes = [
   "/",
   "/products.html",
   "/brand-ingredients.html",
@@ -168,7 +168,7 @@ function writeOutput(content, outputPath) {
 async function main() {
   const baseUrl = process.env.SITEMAP_BASE_URL || defaults.baseUrl;
   const output = path.resolve(__dirname, process.env.SITEMAP_OUTPUT || "../../sitemap.xml");
-  const routes = [...coreRoutes, ...(await fetchCmsRoutes())];
+  const routes = [...allHtmlRoutes, ...(await fetchCmsRoutes())];
   const sitemap = buildSitemap(routes, baseUrl);
   const checkOnly = process.argv.includes("--check");
 
@@ -202,5 +202,5 @@ if (require.main === module) {
 module.exports = {
   allHtmlRoutes,
   buildSitemap,
-  coreRoutes,
+  priorityRoutes,
 };

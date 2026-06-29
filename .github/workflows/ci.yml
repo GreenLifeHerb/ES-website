@@ -16,8 +16,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
-      - run: node infra/scripts/generate-sitemap.js
-      - run: node infra/scripts/generate-robots.js
-      - run: npm run lint
+      - run: npm run seo:build
       - run: npm run test:e2e
       - run: npm run lighthouse

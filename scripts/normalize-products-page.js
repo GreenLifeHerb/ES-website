@@ -51,55 +51,55 @@ const cardFixes = [
   },
   {
     title: "Roxburgh Rose Extract",
-    image: "assets/img/product-roxburgh-rose-extract.png",
+    image: "assets/img/optimized/product-roxburgh-rose-extract-1200.webp",
   },
   {
     title: "Ivy Extract",
-    image: "assets/img/product-ivy-extract.png",
+    image: "assets/img/optimized/product-ivy-extract-1200.webp",
   },
   {
     title: "Fisetin (Cotinus coggygria Extract)",
-    image: "assets/img/product-fisetin-cotinus-coggygria-extract.png",
+    image: "assets/img/optimized/product-fisetin-cotinus-coggygria-extract-1200.webp",
   },
   {
     title: "Echinacea Extract",
-    image: "assets/img/product-echinacea-extract.png",
+    image: "assets/img/optimized/product-echinacea-extract-1200.webp",
   },
   {
     title: "Dioscorea Nipponica Extract",
-    image: "assets/img/product-dioscorea-nipponica-extract.png",
+    image: "assets/img/optimized/product-dioscorea-nipponica-extract-1200.webp",
   },
   {
     title: "Ginger Root Extract",
-    image: "assets/img/product-ginger-root-extract.png",
+    image: "assets/img/optimized/product-ginger-root-extract-1200.webp",
   },
   {
     title: "Aloe Extract",
-    image: "assets/img/product-aloe-extract.png",
+    image: "assets/img/optimized/product-aloe-extract-1200.webp",
   },
   {
     title: "St. John's Wort Extract",
-    image: "assets/img/product-st-johns-wort-extract.png",
+    image: "assets/img/optimized/product-st-johns-wort-extract-1200.webp",
   },
   {
     title: "White Willow Bark Extract",
-    image: "assets/img/product-white-willow-bark-extract.png",
+    image: "assets/img/optimized/product-white-willow-bark-extract-1200.webp",
   },
   {
     title: "Cinnamon Extract",
-    image: "assets/img/product-cinnamon-extract.png",
+    image: "assets/img/optimized/product-cinnamon-extract-1200.webp",
   },
   {
     title: "Kelp Extract",
-    image: "assets/img/product-kelp-extract.png",
+    image: "assets/img/optimized/product-kelp-extract-1200.webp",
   },
   {
     title: "Soybean Extract",
-    image: "assets/img/product-soybean-extract.png",
+    image: "assets/img/optimized/product-soybean-extract-1200.webp",
   },
   {
     title: "Horsetail Extract",
-    image: "assets/img/product-horsetail-extract.png",
+    image: "assets/img/optimized/product-horsetail-extract-1200.webp",
   },
 ];
 

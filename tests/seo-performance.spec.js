@@ -1,4 +1,5 @@
 const fs = require("node:fs");
+const os = require("node:os");
 const path = require("node:path");
 const { execFileSync } = require("node:child_process");
 const { test, expect } = require("@playwright/test");
@@ -86,11 +87,27 @@ test("all static images have alt text", async () => {
 });
 
 test("optimize-images.js can generate webp output", async () => {
+  const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "es-image-optimize-"));
+  const inputDir = path.join(tempRoot, "input");
+  const outputDir = path.join(tempRoot, "output");
+  fs.mkdirSync(inputDir, { recursive: true });
+  fs.writeFileSync(
+    path.join(inputDir, "sample.png"),
+    Buffer.from(
+      "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAFgwJ/lJ79NwAAAABJRU5ErkJggg==",
+      "base64",
+    ),
+  );
+
   execFileSync("node", ["infra/scripts/optimize-images.js"], {
     cwd: rootDir,
     stdio: "pipe",
+    env: {
+      ...process.env,
+      IMAGE_OPTIMIZE_INPUT_DIR: inputDir,
+      IMAGE_OPTIMIZE_OUTPUT_DIR: outputDir,
+    },
   });
-  const outputDir = path.join(rootDir, "assets", "img", "optimized");
   const webpFiles = fs.readdirSync(outputDir).filter((file) => file.endsWith(".webp"));
   expect(webpFiles.length).toBeGreaterThan(0);
 });

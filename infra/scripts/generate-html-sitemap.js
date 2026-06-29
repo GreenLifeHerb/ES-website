@@ -49,6 +49,38 @@ function buildHtmlSitemap(routes) {
       content="Complete directory of Essence Source B2B botanical ingredient pages, product details, buyer guides, sourcing resources, quality documents, and company pages."
     />
     <link rel="canonical" href="https://essencesourceusa.com/sitemap.html" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://essencesourceusa.com/sitemap.html#webpage",
+        "url": "https://essencesourceusa.com/sitemap.html",
+        "name": "HTML Sitemap | Essence Source",
+        "description": "Complete directory of Essence Source B2B botanical ingredient pages, product details, buyer guides, sourcing resources, quality documents, and company pages.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://essencesourceusa.com/#website",
+          "name": "Essence Source"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://essencesourceusa.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "HTML Sitemap",
+              "item": "https://essencesourceusa.com/sitemap.html"
+            }
+          ]
+        }
+      }
+    </script>
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body data-page="sitemap.html">
@@ -75,7 +107,7 @@ ${links}
       <div data-site-footer></div>
     </div>
     <script src="assets/data/site-content.js?v=20260608-insights-seed" defer></script>
-    <script src="assets/js/main.js?v=20260608-insights-seed" defer></script>
+    <script src="assets/js/main.js?v=20260626-mobile-header" defer></script>
     <script src="assets/js/nav.js" defer></script>
   </body>
 </html>

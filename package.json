@@ -14,6 +14,7 @@
     "seo:llms": "node infra/scripts/generate-llms.js",
     "seo:insights": "node infra/scripts/generate-insights-pages.js",
     "seo:search": "node infra/scripts/generate-search-index.js",
+    "seo:build": "npm run seo:insights && npm run seo:sitemap && npm run seo:image-sitemap && npm run seo:sitemap-index && npm run seo:robots && npm run seo:llms && npm run seo:search && npm run seo:validate",
     "seo:validate": "node infra/scripts/validate-structured-data.js",
     "audit:pagespeed": "node infra/scripts/audit-pagespeed.js",
     "audit:seo": "node infra/scripts/audit-seo-baseline.js",
